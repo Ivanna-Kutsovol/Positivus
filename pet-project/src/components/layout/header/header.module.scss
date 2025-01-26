@@ -1,0 +1,55 @@
+.header {
+    display: grid;
+}
+.main{
+    display: grid;
+    align-items: center;
+}
+.nav{
+    display: grid;
+    justify-content: end;
+    grid-column: 2;
+
+    &__list{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    &__item{
+        display: flex;
+    }
+    }
+}
+.button{
+    border: 1px solid var(--dark);
+    padding: 20px 35px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+.logo{
+    display: grid;
+    grid-column: 1;
+    align-items: center;
+}
+.hidden{
+    display: none;
+} 
+.burger{
+    display: grid;
+    grid-column: 2;
+    justify-content: end;
+}
+.cross::after{
+    display: inline-block;
+    content: "\00d7";
+    font-size: 40px;
+    line-height: 0.5;
+    width: auto;
+    height: auto; 
+}
+:hover.button{
+    background-color: var(--dark);
+    color: var(--green);
+}
+:hover.nav__link{
+    background-color: var(--green);
+}

@@ -1,0 +1,93 @@
+:root {
+  --green: #B9FF66;
+  --dark: #191A23;
+  --light: #F3F3F3;
+  --background: #FFFFFF;
+  --black: #000000;
+}
+
+@font-face {
+  font-family: 'space-grotesk';
+  src: url(../../../public/fonts/SpaceGrotesk-Medium.woff2) format("woff2"),
+       url(../../../public/fonts/SpaceGrotesk-Medium.woff) format("woff"),
+       url(../../../public/fonts/SpaceGrotesk-Medium.ttf) format("truetype");
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+}
+
+* {
+  font-family: 'space-grotesk', sans-serif !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media(max-width: 1980px) {
+  body{
+    padding: 60px 100px 0 100px;
+  }
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  h4{
+    font-size: 20px;
+  }
+  p{
+    font-size: 18px;
+    font-weight: lighter;
+  }
+  a{
+    font-size: 20px;
+    font-weight:200;
+    line-height: 28px;
+  }
+}
+
+
+@media(max-width: 1024px) {
+  body{
+    padding: 30px 20px 0 20px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  h3{
+    font-size: 26px;
+  }
+  h4{
+    font-size: 18px;
+  }
+  p{
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 24px;
+  }
+}

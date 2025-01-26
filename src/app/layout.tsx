@@ -3,23 +3,22 @@ import Header from "@/components/layout/header/header";
 import "../app/styles/App.scss";
 import Hero from "@/app/hero/hero";
 import LogoSlider from "./logoSlider/logoSlider";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Positivus",
   description: "Pet project",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({children}: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
         <Header/>
-        <Hero/>
-        <LogoSlider/>
         {children}
       </body>
     </html>

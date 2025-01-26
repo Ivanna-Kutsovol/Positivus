@@ -16,7 +16,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x:hidden !important;
 }
 
 body {
@@ -43,7 +43,7 @@ div {
 
 @media(max-width: 1980px) {
   body{
-    padding: 60px 100px 0 100px;
+    padding: 130px 100px 0 100px;
   }
   h1{
     font-size: 60px;
@@ -71,7 +71,7 @@ div {
 
 @media(max-width: 1024px) {
   body{
-    padding: 30px 20px 0 20px;
+    padding: 50px 20px 0 20px;
   }
   h1{
     font-size: 40px;

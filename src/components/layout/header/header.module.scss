@@ -1,5 +1,12 @@
 .header {
     display: grid;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 4em 6.3em 1em 6.3em;
+    background-color: var(--background);
 }
 .main{
     display: grid;
@@ -29,20 +36,30 @@
     display: grid;
     grid-column: 1;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 .hidden{
     display: none;
+    height: 0px;
+    width: 0px;
 } 
 .burger{
     display: grid;
     grid-column: 2;
     justify-content: end;
+    position: relative;
+    z-index: 2;
+}
+.cross {
+    height: 27px;
+    width: auto;
 }
 .cross::after{
     display: inline-block;
     content: "\00d7";
-    font-size: 40px;
-    line-height: 0.5;
+    font-size: 39px;
+    line-height: 27px;
     width: auto;
     height: auto; 
 }
@@ -52,4 +69,15 @@
 }
 :hover.nav__link{
     background-color: var(--green);
+}
+
+@media(max-width: 800px){
+    .header{
+        width: 100vw;
+        z-index: 2;
+        background-color: var(--background);
+        right: 0;
+        top: 0;
+        padding: 2em 1.3em 1em 1.3em;
+    }
 }

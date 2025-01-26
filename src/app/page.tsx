@@ -1,7 +1,11 @@
+import Hero from "./hero/hero";
+import LogoSlider from "./logoSlider/logoSlider";
+
 export default function Home() {
   return (
-    <div className="page">
-       
+    <div>
+       <Hero/>
+       <LogoSlider/>
     </div>
   );
 }

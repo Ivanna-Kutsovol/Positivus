@@ -19,8 +19,22 @@ export default function Header() {
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }
-    , []);
+    }, []);
+
+    useEffect(() => {
+       if(isBurgerMenu) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+       } else {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+       }
+       return () => {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+       }
+    }, [isBurgerMenu]);
+
 
     const tooggleMenu = () => {
         setIsBurgerMenu((prev) =>!prev);
@@ -63,7 +77,7 @@ export default function Header() {
                 </a>
                 <div className={stl.burger}>
                     <button><Image src={BurgerIcon} className={!isBurgerMenu ? stl.burgerMenu : stl.hidden} alt="Burger Menu" width={24} height={24}/></button>
-                    <button className={isBurgerMenu ? stl.cross : stl.hidden}></button>
+                    <button className={isBurgerMenu ? stl.cross : stl.hidden}/>
                 </div>
                 {isBurgerMenu && <MobileMenu/>}
                 </>

@@ -4,7 +4,6 @@ import stl from "./mobileMenu.module.scss"
 
 
 const MobileMenu = () => {
-
     return (
         <main className={stl.main}>
             <nav className={stl.main__nav}>

@@ -1,0 +1,121 @@
+.main{
+    display: flex;
+    padding: 0 0 100px 0;
+    &__section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 310px;
+        padding: 50px;
+        border: 1px solid var(--dark);
+        border-radius: 45px;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow:  0 5px 0 #191A23;
+    }
+    &__content{
+        display: flex;
+        height: -webkit-fill-available;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &__titleContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 0px
+    }
+    &__title-0,
+    &__title-1, 
+    &__title-2,
+    &__title-3,
+    &__title-4,
+    &__title-5{
+        padding: 0 7px 5px;
+        border-radius: 7px;
+        width: fit-content;
+    }
+
+    &__title-0, 
+    &__title-3,
+    &__title-5{
+        background-color: var(--green);
+    }
+
+    &__title-1,
+    &__title-2,
+    &__title-4{
+        background-color: var(--grey);
+    }
+
+    &__container-0,
+    &__container-3{
+        background-color: var(--grey);
+    }
+
+    &__container-1,
+    &__container-4{
+        background-color: var(--green);
+    }
+
+    &__container-2,
+    &__container-5{
+        background-color: var(--dark);
+    }
+
+    &__button-2,
+    &__button-5{
+        color: var(--grey);
+    }
+    &__button-0,
+    &__button-1,
+    &__button-2,
+    &__button-3,
+    &__button-4,
+    &__button-5{
+        display: flex;
+        align-items: center;
+        left: 0;
+    }
+   
+
+    &__button-0::before,
+    &__button-1::before,
+    &__button-3::before,
+    &__button-4::before{
+        background-color: #191A23;
+        color: var(--green);
+    }
+
+    &__button-0::before,
+    &__button-1::before,
+    &__button-2::before,
+    &__button-3::before,
+    &__button-4::before,
+    &__button-5::before{
+    content: "\2192";
+        left: 0;
+        position: relative;
+        margin: 0 15px 0 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 90%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 35px;
+        transform: rotateZ(-30deg);
+    }
+
+    &__button-2::before,
+    &__button-5::before{
+        color: var(--dark);
+        background-color: var(--grey);
+    }
+}

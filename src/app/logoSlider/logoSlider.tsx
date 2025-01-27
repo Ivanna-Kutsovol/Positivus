@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import stl from "./logoSlider.module.scss";
 import Image from "next/image";
 import amazon from "/public/logoSlider/logo-amazon.webp";

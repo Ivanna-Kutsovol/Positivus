@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/header";
 import "../app/styles/App.scss";
-import Hero from "@/app/hero/hero";
-import LogoSlider from "./logoSlider/logoSlider";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {

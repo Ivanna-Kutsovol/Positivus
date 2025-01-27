@@ -1,6 +1,16 @@
 .main{
-    display: flex;
     padding: 0 0 100px 0;
+    &__text{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 0 0 85px 0;
+    }
+    &__topic{
+        background-color: var(--green);
+        padding: 7px;
+        border-radius: 7px;
+    }
     &__section{
         display: flex;
         flex-direction: row;
@@ -75,47 +85,87 @@
     }
     &__button-0,
     &__button-1,
-    &__button-2,
     &__button-3,
-    &__button-4,
-    &__button-5{
+    &__button-4{
+        &::before{
+            background-color: #191A23;
+            color: var(--green);
+        }
+    }
+    &__button{
         display: flex;
         align-items: center;
         left: 0;
+        &::before{
+            content: "\2192";
+            left: 0;
+            position: relative;
+            margin: 0 15px 0 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 35px;
+            transform: rotateZ(-30deg);
+            transition: transform 0.3s ease-in-out;
+        }
+        &:hover::before{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
     }
-   
-
-    &__button-0::before,
-    &__button-1::before,
-    &__button-3::before,
-    &__button-4::before{
-        background-color: #191A23;
-        color: var(--green);
+    &__button-2,
+    &__button-5{
+        &::before{
+            color: var(--dark);
+            background-color: var(--grey);
+        }
     }
+}
 
-    &__button-0::before,
-    &__button-1::before,
-    &__button-2::before,
-    &__button-3::before,
-    &__button-4::before,
-    &__button-5::before{
-    content: "\2192";
-        left: 0;
-        position: relative;
-        margin: 0 15px 0 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 90%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        font-size: 35px;
-        transform: rotateZ(-30deg);
-    }
-
-    &__button-2::before,
-    &__button-5::before{
-        color: var(--dark);
-        background-color: var(--grey);
+@media(max-width: 800px) {
+    .main{
+        &__text{
+            flex-direction: column;
+            padding: 0 0 30px 0;
+            align-items: center;
+            gap: 30px;
+        }
+        &__title{
+            font-size: 18px !important;
+        }
+        &__container{
+            display: grid;
+            height: 335px;
+            padding: 40px;
+            border-radius: 30px;
+            width: 335px;
+        }
+        &__content{
+            display: grid;
+            grid-column: 1/4;
+        }
+        &__illustration{
+            display: grid;
+            grid-column: 3;
+            grid-row: 2;
+            & > img{
+            width: auto;
+            height: 125px;
+            right: 0;
+            bottom: 20px;
+            position: relative;
+        }
+        }
+        &__button{
+            visibility: hidden;
+            &::before{
+                visibility: visible;
+                margin: 0;
+                right: 60px;
+                top: 135px;
+            }
+        }
     }
 }

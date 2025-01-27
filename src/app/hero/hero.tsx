@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const hero = () => {
     return (
-        <main className={stl.main}>
+        <section className={stl.main}>
             <h1 className={stl.main__title}>Navigating the digital landscape for success</h1>
             <div className={stl.main__ilustration}>
                 <Image src={Ilustration} alt="Ilustration hero" width={600} height={515} priority/>
@@ -17,7 +17,7 @@ const hero = () => {
             </p>
             <button className={stl.main__button}>Book a consultation</button>
             </section>
-        </main>
+        </section>
     )
 }
 

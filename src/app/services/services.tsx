@@ -8,6 +8,7 @@ import third from "/public/services/cardIllustrationThird.webp";
 import fourth from "/public/services/cardIllustrationFourth.webp";
 import sixth from "/public/services/cardIllustrationSixth.webp";
 import Link from "next/link";
+import { Card } from "@/components/cards/service";
 
 const cards = [{
     image:  first,
@@ -41,33 +42,25 @@ const cards = [{
 }];
 const Services = () => {
     return (
-        <main className={stl.main}>
+        <section className={stl.main}>
+            <section className={stl.main__text}>
+                <h2 className={stl.main__topic}>Services</h2>
+                <p className={stl.main__description}>At our digital marketing agency, we offer a range of services to help 
+                    businesses grow and succeed online. These services include:</p>
+            </section>
             <section className={stl.main__section}>
                 {cards.map((cardsContent, index) => (
-                    <div key={`card-${index}`} className={`${stl.main__container} ${stl[`main__container-${index}`]}`}>
-                        <span className={stl.main__content}>
-                        <span className={stl.main__titleContainer}>
-                            {cardsContent.title.split("\n").map((line, i) => (
-                                <React.Fragment key={i}>
-                                        <h3 className={stl[`main__title-${index}`]} key={i}>
-                                            {line}
-                                        </h3>
-                                </React.Fragment>
-                            ))}
-                            </span>
-                            <Link href="/" className={stl[`main__button-${index}`]}>
-                                    {cardsContent.descriptionButton}
-                            </Link>
-                        </span>
-
-                        <div className={stl.main__illustration}>
-                            <Image src={cardsContent.image} alt={`illustration ${index + 1}`} width={210} height={170} priority />
-                        </div>
-                    </div>
+                    <Card key={`card-${index}`} className={`${stl[`main__container-${index}`]} ${stl.main__container}`}
+                    contentClassName={stl.main__content}
+                    titleContentClassName={stl.main__titleContent}
+                    title={cardsContent.title} titleClassName={stl[`main__title-${index}`]}
+                    descriptionButton={cardsContent.descriptionButton} classNameButton={`${stl[`main__button-${index}`]} ${stl.main__button}`} href='/'
+                    image={cardsContent.image} classNameIlustration={stl.main__illustration} width={210} height={170}
+                    />
                 ))}
-                </section>
-        </main>
+            </section>
+        </section>              
     );
-};
+}
 
 export default Services;

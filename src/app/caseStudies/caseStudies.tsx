@@ -19,10 +19,8 @@ const caseStudies = () => {
             </section>
         <section className={stl.main}>
             {content.map((cartContent, index) => (
-                <div className={stl.main__line} key={index}>
                 <Case key={index}
                         description={cartContent.description} className={stl[`main__line-${index}`]} />
-                </div>
             ))}
         </section>
     </section>

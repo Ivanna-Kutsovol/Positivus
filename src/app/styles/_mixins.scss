@@ -24,7 +24,6 @@
 
 @mixin text{
     &__line{
-        width: 95%;
         &::after{
             display: none;
         }

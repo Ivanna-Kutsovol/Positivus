@@ -18,7 +18,7 @@
         height: 310px;
         padding: 50px;
         border: 1px solid var(--dark);
-        border-radius: 45px;
+        border-radius: var(--radius);
         align-items: center;
         justify-content: space-between;
         box-shadow:  0 5px 0 #191A23;
@@ -34,12 +34,7 @@
         flex-direction: column;
         gap: 0px
     }
-    &__title-0,
-    &__title-1, 
-    &__title-2,
-    &__title-3,
-    &__title-4,
-    &__title-5{
+    &__title{
         padding: 0 7px 5px;
         border-radius: 7px;
         width: fit-content;

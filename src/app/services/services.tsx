@@ -53,7 +53,7 @@ const Services = () => {
                     <Card key={`card-${index}`} className={`${stl[`main__container-${index}`]} ${stl.main__container}`}
                     contentClassName={stl.main__content}
                     titleContentClassName={stl.main__titleContent}
-                    title={cardsContent.title} titleClassName={stl[`main__title-${index}`]}
+                    title={cardsContent.title} titleClassName={`${stl[`main__title-${index}`]} ${stl.main__title}`}
                     descriptionButton={cardsContent.descriptionButton} classNameButton={`${stl[`main__button-${index}`]} ${stl.main__button}`} href='/'
                     image={cardsContent.image} classNameIlustration={stl.main__illustration} width={210} height={170}
                     />

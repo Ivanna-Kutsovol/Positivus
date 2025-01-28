@@ -1,0 +1,12 @@
+@use '../styles/mixins' as *;
+.main{
+    @include main;
+    @include text;
+    &__description{
+        width: fit-content;
+    }
+}
+
+@include media;
+@include mediaText;
+

@@ -4,6 +4,7 @@
   --grey: #F3F3F3;
   --background: #FFFFFF;
   --black: #000000;
+  --radius: 45px;
 }
 
 @font-face {
@@ -12,7 +13,6 @@
        url(../../../public/fonts/SpaceGrotesk-Medium.woff) format("woff"),
        url(../../../public/fonts/SpaceGrotesk-Medium.ttf) format("truetype");
 }
-
 
 html,
 body {

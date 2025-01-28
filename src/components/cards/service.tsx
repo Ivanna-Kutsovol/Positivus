@@ -37,7 +37,7 @@ export const Card: React.FC<Card> = ({ image, title, descriptionButton,
                 </div>
 
                 <div className={classNameIlustration}>
-                    <Image src={image} alt="illustration" priority width={width} height={height}/>
+                    <Image src={image} alt="illustration"  priority width={width} height={height}/>
                 </div>
         </div>
     )

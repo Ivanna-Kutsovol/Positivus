@@ -1,0 +1,15 @@
+.button{
+        border: 1px solid var(--dark);
+        border-radius: 14px;
+        padding: 20px 35px;
+        width: fit-content;
+        font-size: 20px;
+        line-height: 28px;
+        height: fit-content;
+}
+
+@media(max-width: 800px) {
+    .button{
+        padding: 10px 15px;
+    }
+}

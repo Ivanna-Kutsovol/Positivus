@@ -1,16 +1,9 @@
+@use '../styles/mixins' as *;
+
 .main{
     padding: 0 0 100px 0;
-    &__text{
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        padding: 0 0 85px 0;
-    }
-    &__topic{
-        background-color: var(--green);
-        padding: 7px;
-        border-radius: 7px;
-    }
+    @include text;
+    
     &__section{
         display: flex;
         flex-direction: row;
@@ -126,21 +119,13 @@
 
 @media(max-width: 800px) {
     .main{
-        &__text{
-            flex-direction: column;
-            padding: 0 0 30px 0;
-            align-items: center;
-            gap: 30px;
-        }
-        &__title{
-            font-size: 18px !important;
-        }
+        position: relative;
         &__container{
             display: grid;
             height: 335px;
             padding: 40px;
             border-radius: 30px;
-            width: 335px;
+            position: relative;
         }
         &__content{
             display: grid;
@@ -169,3 +154,5 @@
         }
     }
 }
+
+@include mediaText;

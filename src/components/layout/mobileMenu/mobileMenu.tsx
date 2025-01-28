@@ -1,7 +1,7 @@
 'use client'
 import React from "react"
 import stl from "./mobileMenu.module.scss"
-
+import Button from "@/components/UI/button/button";
 
 const MobileMenu = () => {
     return (
@@ -23,7 +23,7 @@ const MobileMenu = () => {
                 <li className={stl.main__item}>
                     <a className={stl.main__link} href="#">Blog</a>
                 </li>
-                    <button className={stl.button}>Request a quote</button>
+                    <Button type="submit" className={stl.button}>Request a quote</Button>
             </ul>
         </nav> 
         </main>     

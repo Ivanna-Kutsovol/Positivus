@@ -6,6 +6,7 @@ import Logo from "/public/logo.webp";
 import MobileMenu from "../mobileMenu/mobileMenu";
 import BurgerIcon from "/public/burgerMenu.webp";
 import stl from "./header.module.scss"
+import Button from "@/components/UI/button/button";
 
 export default function Header() {
     const [isViewMobile, setIsViewMobile] = useState(false);
@@ -64,7 +65,7 @@ export default function Header() {
                     <li className={stl.nav__item}>
                         <a className={stl.nav__link} href="#">Blog</a>
                     </li>
-                        <a className={stl.button}>Request a quote</a>
+                    <Button type="submit" className={stl.button}>Request a quote</Button>
                 </ul>
             </nav> 
             </main>

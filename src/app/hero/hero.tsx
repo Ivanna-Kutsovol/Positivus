@@ -2,6 +2,7 @@ import React from "react";
 import stl from "./hero.module.scss";
 import Ilustration from "/public/hero.webp";
 import Image from "next/image";
+import Button from "@/components/UI/button/button";
 
 const hero = () => {
     return (
@@ -15,7 +16,7 @@ const hero = () => {
                 succeed online through a range of services including SEO, 
                 PPC, social media marketing, and content creation.
             </p>
-            <button className={stl.main__button}>Book a consultation</button>
+            <Button className={stl.main__button}>Book a consultation</Button>
             </section>
         </section>
     )

@@ -45,7 +45,7 @@ const Services = () => {
         <section className={stl.main}>
             <section className={stl.main__text}>
                 <h2 className={stl.main__topic}>Services</h2>
-                <p className={stl.main__description}>At our digital marketing agency, we offer a range of services to help 
+                <p className={stl.main__descriptionText}>At our digital marketing agency, we offer a range of services to help 
                     businesses grow and succeed online. These services include:</p>
             </section>
             <section className={stl.main__section}>

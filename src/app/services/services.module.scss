@@ -39,34 +39,28 @@
         border-radius: 7px;
         width: fit-content;
     }
-
     &__title-0, 
     &__title-3,
     &__title-5{
         background-color: var(--green);
     }
-
     &__title-1,
     &__title-2,
     &__title-4{
         background-color: var(--grey);
     }
-
     &__container-0,
     &__container-3{
         background-color: var(--grey);
     }
-
     &__container-1,
     &__container-4{
         background-color: var(--green);
     }
-
     &__container-2,
     &__container-5{
         background-color: var(--dark);
     }
-
     &__button-2,
     &__button-5{
         color: var(--grey);
@@ -122,6 +116,9 @@
             border-radius: 30px;
             position: relative;
         }
+        &__section{
+            justify-content: center;
+        }
         &__content{
             display: grid;
             grid-column: 1/4;
@@ -134,7 +131,7 @@
             width: auto;
             height: 125px;
             right: 0;
-            bottom: 20px;
+            bottom: 40px;
             position: relative;
         }
         }

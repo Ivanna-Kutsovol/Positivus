@@ -5,28 +5,30 @@ interface CaseProps {
     className?: string;
     title?: string;
     description: string;
-    
+    classNameMain?: string;
+    classNameTitle?: string;
+    classNameDescription?: string;
 }
 
-export const Case :React.FC<CaseProps> = ({className = '', title, description}) => {
+export const Case :React.FC<CaseProps> = ({className = '', title, description, classNameMain='',classNameTitle='', classNameDescription=''}) => {
     return (
-        <section className={stl.main}>
-            <section className={stl.main__titile}>
+        <section className={classNameMain}>
+            <section className={classNameTitle}>
             {title?.split(`\n`).map((line, i) => (
                 <React.Fragment key={i}>
                     {line}
                 </React.Fragment>
             ))} 
             </section>
-            <section className={stl.main__description}>
+            <section className={classNameDescription}>
             {description.split(`\n`).map((text, t) => (
                 <div key={t}>
                     {text}
                 </div>
             ))}
             </section>
-            <div className={stl.main__leanMore}>
-                <button className={stl.main__leanMore__text}>Lean more</button>
+            <div className={stl.leanMore}>
+                <button className={stl.leanMore__text}>Lean more</button>
             </div>
         </section>
     )

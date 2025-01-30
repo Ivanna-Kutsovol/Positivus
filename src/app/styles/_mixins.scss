@@ -7,27 +7,34 @@
     gap: 128px;
     position: relative;
     align-items: flex-start;
-    &__line{
+    justify-content: center;
+    &__description{
+        width: 290px;
+        overflow-wrap: break-word;
+        position: relative;
+        
+    }
+    &__container{
+        width: fit-content;
         display: flex;
         flex-direction: column;
+        gap: 20px;
         position: relative;
-        &::after{
+        align-items: flex-start;
+        ::before{
             content: "";
-            width: 1px;
-            height: 100%;
-            background-color: var(--background);
             position: absolute;
-            right: -64px;
+            width: 1px;
+            height: 140px;
+            background-color: var(--background);
+            right: -60px;
+            bottom: 0px;
+            top: 0px;
         }
     }
   }
 
 @mixin text{
-    &__line{
-        &::after{
-            display: none;
-        }
-    }
     &__text{
         display: flex;
         flex-direction: row;
@@ -38,17 +45,58 @@
         background-color: var(--green);
         padding: 7px;
         border-radius: 7px;
+        height: fit-content;
     }    
+    &__descriptionText{
+        width: 580px;
+    }
 }
 
-@mixin media{
+
+@mixin caseStudy{
+    @media(max-width: 1024px) {
+        .main{
+            justify-content: space-between;
+            padding: 50px 40px;
+            gap: 0;
+            &__container{
+                ::before{
+                    display: none;
+                }
+            }
+            &__description{
+                font-size: 16px;
+            }
+        }
+    }
     @media(max-width: 800px) {
         .main{
             background-color: var(--background);
-            gap: 40px;
             padding: 0px;
-            width: 95%;
-            line-height: 28px;
+            line-height: 22px;
+            overflow: auto;
+            overflow: scroll;
+            gap: 15px;
+            border-radius: 0;
+            position: relative;
+            justify-content: flex-start;
+            margin-right: -20px;
+            padding: 0 20px 0 0 ;
+            &__container{
+                background-color: var(--dark);
+                border-radius: var(--radius);
+                ::after{
+                    display: none;
+                }
+            }
+            &__description{
+                width: 300px;
+                padding: 20px 40px 0 40px;
+                font-size: 16px;
+            }
+            &::-webkit-scrollbar {
+                width: 0;
+              }
         }
     }
 }
@@ -62,11 +110,12 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                padding: 0 0 40px 0;
             }
             &__title{
                 font-size: 18px !important;
             }
-            &__description{
+            &__descriptionText{
                 width: fit-content;
             }
         }

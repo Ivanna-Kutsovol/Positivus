@@ -1,12 +1,17 @@
 @use '../styles/mixins' as *;
+.section{
+    padding: 0 0 140px 0;
+}
 .main{
     @include main;
     @include text;
-    &__description{
-        width: 580px;
-    }
 }
 
-@include media;
+@include caseStudy;
 @include mediaText;
 
+@media(max-width: 800px) {
+    .section{
+        padding: 0 0 100px 0;
+    }
+}

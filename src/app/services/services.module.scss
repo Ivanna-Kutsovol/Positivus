@@ -121,8 +121,9 @@
             grid-column: 1/4;
         }
         &__illustration{
-            display: grid;
-            grid-column: 3;
+            position: absolute;
+            right: 40px;
+            bottom: 50px;
             & > img{
             width: auto;
             height: 125px;

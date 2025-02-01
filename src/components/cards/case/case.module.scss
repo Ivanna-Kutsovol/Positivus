@@ -1,3 +1,4 @@
+@use '../../../app/styles/mixins' as *;
 .leanMore{
         color: var(--green);
         display: flex;
@@ -6,37 +7,18 @@
         height: max-content;
         width: max-content;
         &::after{
-            content: "\2192";
-            left: 0;
-            position: relative;
-            margin: 0 15px 0 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            font-size: 35px;
-            transform: rotateZ(-30deg);
-            transition: transform 0.3s ease-in-out;
+            @include buttonArrow;
             font-weight: 600;
-        }
-        &:hover::after{
-            transform: scale3d(1.1, 1.1, 1.1);
         }
     }
 
 @media(max-width: 800px) {
     .leanMore{
-        transition: none;
         left: 40px;
         padding: 0 0 40px 0;
         position: relative;
         &__text{
             font-size: 20px;
         }
-        &:hover::after{
-            transform: none;
-        }   
     }
 }

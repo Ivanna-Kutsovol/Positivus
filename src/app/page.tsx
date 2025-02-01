@@ -3,6 +3,7 @@ import LogoSlider from "./logoSlider/logoSlider";
 import Services from "./services/services";
 import ArticleFirst from "./article/article";
 import CaseStudies from "./caseStudies/caseStudies"
+import WorkingProcess from "./workingProcess/workingProcess";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
        <Services/>
        <ArticleFirst/>
        <CaseStudies/>
+       <WorkingProcess/>
     </div>
   );
 }

@@ -12,7 +12,6 @@
         width: 290px;
         overflow-wrap: break-word;
         position: relative;
-        
     }
     &__container{
         width: fit-content;
@@ -50,8 +49,24 @@
     &__descriptionText{
         width: 580px;
     }
-}
 
+    @media(max-width: 800px) {
+        .main{
+            &__text{
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0 0 40px 0;
+            }
+            &__descriptionText{
+                width: fit-content;
+            }
+        }
+        
+    }
+}
 
 @mixin caseStudy{
     @media(max-width: 1024px) {
@@ -101,22 +116,140 @@
     }
 }
 
-@mixin mediaText{
+@mixin container {
+    &__section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 310px;
+        padding: 50px;
+        border: 1px solid var(--dark);
+        border-radius: var(--radius);
+        align-items: center;
+        justify-content: space-between;
+        box-shadow:  0 5px 0 #191A23;
+    }
+    &__content{
+        display: flex;
+        height: -webkit-fill-available;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &__titleContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 0px
+    }
+    &__title{
+        padding: 0 7px 5px;
+        border-radius: 7px;
+        width: fit-content;
+    }
     @media(max-width: 800px) {
-        .main{
-            &__text{
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 0 0 40px 0;
+            &__container{
+                display: grid;
+                height: 335px;
+                padding: 40px;
+                border-radius: 30px;
+                position: relative;
             }
-            &__descriptionText{
-                width: fit-content;
+            &__content{
+                display: grid;
+                grid-column: 1/4;
+            }
+            &__illustration{
+                position: absolute;
+                right: 40px;
+                bottom: 50px;
+                & > img{
+                width: auto;
+                height: 125px;
+                right: 0;
+                position: relative;
             }
         }
-        
     }
-
 }
+
+@mixin buttonArrow {
+        content: "\2192";
+        left: 0;
+        position: relative;
+        margin: 0 15px 0 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 35px;
+        transform: rotateZ(-30deg);
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    @media(max-width: 800px) {
+            visibility: visible;
+            position: absolute;
+            margin: 0;
+            left: 40px;
+            bottom: 35px;
+    }
+}
+
+@mixin accordion {
+    &__containerContent{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        box-shadow:  0 5px 0 #191A23;
+        border-radius: var(--radius);
+        border: 1px solid #191A23;
+        padding: 60px 41px;
+        background-color: var(--grey);
+    }
+    &__contentPrev{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: var(--radius);
+    }
+    &__containerText{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        align-items: center;
+    }
+    &__number{
+        font-size: 60px;
+    }
+    &__title{
+        font-size: 30px;
+    }
+   &__hidden{
+        display: none;
+   }
+   .open{
+    display: flex;
+    background-color: var(--green);
+    gap: 30px;
+    border-radius: var(--radius);
+    &__description{
+        border-top: 1px solid #191A23;
+        padding: 30px 0 0 0;
+    }
+}
+}
+

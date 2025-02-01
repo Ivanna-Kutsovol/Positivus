@@ -1,44 +1,10 @@
 @use '../styles/mixins' as *;
 
 .main{
-    padding: 0 0 100px 0;
     @include text;
-    
-    &__section{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 40px;
-    }
-    &__container{
-        display: flex;
-        flex-direction: row;
-        width: 600px;
-        height: 310px;
-        padding: 50px;
-        border: 1px solid var(--dark);
-        border-radius: var(--radius);
-        align-items: center;
-        justify-content: space-between;
-        box-shadow:  0 5px 0 #191A23;
-    }
-    &__content{
-        display: flex;
-        height: -webkit-fill-available;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-    &__titleContainer{
-        display: flex;
-        flex-direction: column;
-        gap: 0px
-    }
-    &__title{
-        padding: 0 7px 5px;
-        border-radius: 7px;
-        width: fit-content;
-    }
+    @include container;
+    padding: 0 0 100px 0;
+    position: relative;
     &__title-0, 
     &__title-3,
     &__title-5{
@@ -61,6 +27,14 @@
     &__container-5{
         background-color: var(--dark);
     }
+    &__button{
+        display: flex;
+        align-items: center;
+        left: 0;
+        &::before{
+            @include buttonArrow;
+        }
+    }
     &__button-2,
     &__button-5{
         color: var(--grey);
@@ -74,29 +48,6 @@
             color: var(--green);
         }
     }
-    &__button{
-        display: flex;
-        align-items: center;
-        left: 0;
-        &::before{
-            content: "\2192";
-            left: 0;
-            position: relative;
-            margin: 0 15px 0 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            font-size: 35px;
-            transform: rotateZ(-30deg);
-            transition: transform 0.3s ease-in-out;
-        }
-        &:hover::before{
-            transform: scale3d(1.1, 1.1, 1.1);
-        }
-    }
     &__button-2,
     &__button-5{
         &::before{
@@ -108,40 +59,8 @@
 
 @media(max-width: 800px) {
     .main{
-        position: relative;
-        &__container{
-            display: grid;
-            height: 335px;
-            padding: 40px;
-            border-radius: 30px;
-            position: relative;
-        }
-        &__content{
-            display: grid;
-            grid-column: 1/4;
-        }
-        &__illustration{
-            position: absolute;
-            right: 40px;
-            bottom: 50px;
-            & > img{
-            width: auto;
-            height: 125px;
-            right: 0;
-            position: relative;
-        }
-        }
         &__button{
             visibility: hidden;
-            &::before{
-                visibility: visible;
-                position: absolute;
-                margin: 0;
-                left: 40px;
-                bottom: 35px;
-            }
         }
     }
 }
-
-@include mediaText;

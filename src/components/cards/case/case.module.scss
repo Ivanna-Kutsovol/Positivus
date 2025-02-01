@@ -3,12 +3,12 @@
         color: var(--green);
         display: flex;
         align-items: center;
-        left: 0;
+        right: 0;
         height: max-content;
         width: max-content;
         &::after{
-            @include buttonArrow;
             font-weight: 600;
+            @include buttonArrow;
         }
     }
 
@@ -17,6 +17,10 @@
         left: 40px;
         padding: 0 0 40px 0;
         position: relative;
+        &::after{
+            left: 110px;
+            bottom: 30px;
+        }
         &__text{
             font-size: 20px;
         }

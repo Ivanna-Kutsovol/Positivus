@@ -13,17 +13,19 @@ const content = [{
 const caseStudies = () => {
     return(
         <section className={stl.section}>
+        <section className={stl.main}>
             <section className={stl.main__text}>
                 <h2 className={stl.main__topic}>Case Studies</h2>
                 <p className={stl.main__descriptionText}>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
             </section>
-        <section className={stl.main}>
+        <section className={stl.mainCards}>
             {content.map((cartContent, index) => (
                 <Case key={index} 
-                    classNameMain={stl.main__container}                    
-                    classNameDescription={stl.main__description}
+                    classNameMain={stl.mainCards__container}                    
+                    classNameDescription={stl.mainCards__description}
                     description={cartContent.description} className={stl[`main__line-${index}`]} />
             ))}
+            </section>
         </section>
     </section>
 

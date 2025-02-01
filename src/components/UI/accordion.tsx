@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import plus from "../../../public/accordion/plusIcon.svg";
 import minus from "../../../public/accordion/minusIcon.svg";
+import { motion } from "framer-motion";
 
 interface AccordionProps {
     number: string;
@@ -16,10 +17,10 @@ interface AccordionProps {
     classNameContainerTitle?: string;
     classNameContainerTitleAndButton?: string;
     classNameOpen?: string;
-    classNameHidden?: string
+    classNameIcon?: string;
 }
 
-export const Accordion :React.FC<AccordionProps> = ({title, description, className = '', classNameTitle = '', classNameHidden = '',
+export const Accordion :React.FC<AccordionProps> = ({title, description, className = '', classNameTitle = '', classNameIcon = '',
     classNameDescription = '', classNameNumber = '', number, classNameContainerTitle='', classNameContainerTitleAndButton = '', classNameOpen=''
 }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,16 +42,22 @@ export const Accordion :React.FC<AccordionProps> = ({title, description, classNa
                 ))}
                 </div>
                 <button onClick={() => setIsOpen(!isOpen)}>
-                    <Image src={isOpen ? minus : plus} alt="Plus icon" width={58} height={58} priority/>
+                    <Image className={classNameIcon} src={isOpen ? minus : plus} alt="Plus icon" width={58} height={58} priority/>
                 </button> 
             </section>     
-            <div className={isOpen ? classNameDescription :classNameHidden} >
+            <motion.div 
+                className={classNameDescription} 
+                initial={{ height: 0}}
+                animate={isOpen ? { height: "180px" } : { height: 0, opacity: 0 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                style={{ overflow: 'hidden' }}
+             >
                 {isOpen && description.split('\n').map((line, i) => (
                     <div key={i}>
                         <p>{line}</p>
                     </div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     )   
 }

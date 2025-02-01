@@ -2,15 +2,16 @@
 .section{
     padding: 0 0 140px 0;
 }
+
 .main{
-    @include main;
     @include text;
 }
-
-@include caseStudy;
+.mainCards{
+    @include main;
+}
 
 @media(max-width: 800px) {
     .section{
-        padding: 0 0 100px 0;
+        padding: 0 0 50px 0;
     }
 }

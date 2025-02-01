@@ -36,26 +36,27 @@ const content = [{
 
 const WorkingProcess = () => {
     return( 
-    <section className={stl.main}>
-        <section className={stl.main__text}>
-        <h2 className={stl.main__topic}>Working Process</h2>
-        <p className={stl.main__descriptionText}>Step-by-Step Guide to Achieving Your Business Goals</p>
-        </section>
+    <section className={stl.section}>
+        <section className={stl.main}>
+            <section className={stl.main__text}>
+                <h2 className={stl.main__topic}>Working Process</h2>
+                <p className={stl.main__descriptionText}>Step-by-Step Guide to Achieving Your Business Goals</p>
+            </section>
         <section className={stl.main__containerContent}>
-        {content.map((cartContent, index) => (
-            <Accordion key={index} 
-            classNameOpen={stl.open}
-            className={stl.main__content}
-            classNameContainerTitleAndButton={stl.main__contentPrev}
-            classNameContainerTitle={stl.main__containerText}
-            number={cartContent.number}  classNameNumber={stl.main__number}
-            title={cartContent.title} classNameTitle={stl.main__title}
-            description={cartContent.description} classNameDescription={stl.open__description}
-            classNameHidden={stl.main__hidden}
-            />
-        ))}
+            {content.map((cartContent, index) => (
+                <Accordion key={index} 
+                classNameOpen={stl.open}
+                className={stl.main__content}
+                classNameContainerTitleAndButton={stl.main__contentPrev}
+                classNameContainerTitle={stl.main__containerText}
+                number={cartContent.number}  classNameNumber={stl.main__number}
+                title={cartContent.title} classNameTitle={stl.main__title}
+                description={cartContent.description} classNameDescription={stl.open__description}
+                classNameIcon={stl.main__icon}
+                />
+            ))}
+            </section>  
         </section>
-        
     </section>
     );
 };

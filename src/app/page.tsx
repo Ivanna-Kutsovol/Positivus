@@ -4,6 +4,7 @@ import Services from "./services/services";
 import ArticleFirst from "./article/article";
 import CaseStudies from "./caseStudies/caseStudies"
 import WorkingProcess from "./workingProcess/workingProcess";
+import Team from "./team/team";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
        <ArticleFirst/>
        <CaseStudies/>
        <WorkingProcess/>
+       <Team/>
     </div>
   );
 }

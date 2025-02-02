@@ -48,8 +48,8 @@ export const Accordion :React.FC<AccordionProps> = ({title, description, classNa
             <motion.div 
                 className={classNameDescription} 
                 initial={{ height: 0}}
-                animate={isOpen ? { height: "180px" } : { height: 0, opacity: 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
+                animate={isOpen ? { height: "100px" } : { height: '20px', opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
                 style={{ overflow: 'hidden' }}
              >
                 {isOpen && description.split('\n').map((line, i) => (

@@ -185,9 +185,8 @@
         font-size: 35px;
         transform: rotateZ(-30deg);
         transition: transform 0.3s ease-in-out;
-        &:hover{
-            transform: scale3d(1.1, 1.1, 1.1);
-        }
+        cursor: pointer;
+
     @media(max-width: 800px) {
             visibility: visible;
             position: absolute;

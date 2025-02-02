@@ -10,6 +10,9 @@
             font-weight: 600;
             @include buttonArrow;
         }
+        &:hover::after{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
     }
 
 @media(max-width: 800px) {
@@ -20,6 +23,12 @@
         &::after{
             left: 110px;
             bottom: 30px;
+        }
+        &:hover::after{
+            transform: none;
+        }
+        &:active::after{
+            transform: scale3d(1.1, 1.1, 1.1);
         }
         &__text{
             font-size: 20px;

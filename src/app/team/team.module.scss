@@ -1,0 +1,55 @@
+@use "../styles/mixins" as text;
+
+.section{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 100px 0;
+}
+.main{
+    @include text.text;
+}
+.team{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 40px 35px;
+        width: 380px;
+        height: 330px;
+        border-radius: var(--radius);
+        box-shadow:  0 5px 0 #191A23;
+        border: 1px solid #191A23;
+        gap: 56px;
+        position: relative;
+    }
+    &__shortInfo{
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: flex-end;
+        position: relative;
+    }
+    &__socialIcon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__nameAndPosition{
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+}
+.line{
+    position: absolute;
+    width: calc(100% - 70px);
+    height: 1px;
+    background-color: #191A23;
+    bottom: 50%;
+    top: 50%;
+    right: 35px;
+    left: 35px;
+}

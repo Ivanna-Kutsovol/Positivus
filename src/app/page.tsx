@@ -5,6 +5,7 @@ import ArticleFirst from "./article/article";
 import CaseStudies from "./caseStudies/caseStudies"
 import WorkingProcess from "./workingProcess/workingProcess";
 import Team from "./team/team";
+import Testimonials from "./testimonials/testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
        <CaseStudies/>
        <WorkingProcess/>
        <Team/>
+       <Testimonials/>
     </div>
   );
 }

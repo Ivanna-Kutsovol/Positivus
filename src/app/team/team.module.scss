@@ -13,6 +13,7 @@
     flex-direction: row;
     gap: 40px;
     flex-wrap: wrap;
+    justify-content: flex-end;
     &__container{
         display: flex;
         flex-direction: column;
@@ -42,6 +43,14 @@
         flex-direction: column;
         gap: 10px
     }
+    &__button{
+        background-color: var(--dark);
+        color: var(--background);
+        &:hover{
+            background-color: var(--green);
+            color: var(--dark);
+        }
+    }
 }
 .line{
     position: absolute;
@@ -52,4 +61,12 @@
     top: 50%;
     right: 35px;
     left: 35px;
+}
+
+@media(max-width: 800px) {
+    .team{
+        &__container{
+            padding: 30px 25px;
+        }
+    }
 }

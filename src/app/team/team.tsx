@@ -8,6 +8,7 @@ import FourthImage from '../../../public/team/pictureFourth.webp';
 import FifthImage from '../../../public/team/pictureFifth.webp';
 import SixthImage from '../../../public/team/pictureSixth.webp';
 import Social from '../../../public/team/socialIcon.webp';
+import Button from "@/components/UI/button/button";
 
 const content = [
     {
@@ -72,6 +73,7 @@ const Team = () => {
                         <p className={stl.team__info}>{item.info}</p>
                         </div>
                 ))}
+                <Button className={stl.team__button}>See all team</Button>
             </section>
         </section>
     );

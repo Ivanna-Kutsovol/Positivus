@@ -2,11 +2,13 @@
 
 import React from "react";
 import stl from "./testimonials.module.scss";
+import Image from "next/image";
 import {Swiper , SwiperSlide} from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
+import arrow from "../../../public/arrowRight.png"
 
 const Testimonials = () => {
     return(
@@ -29,10 +31,6 @@ const Testimonials = () => {
         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
-          }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
           }}
         >
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
@@ -94,13 +92,12 @@ const Testimonials = () => {
                     Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
+            <div className={stl.swiper__buttonContainer}>
+                <Image className="swiper-button-next" style={{width: "20px", height: "23px"}} src={arrow} alt={"arrow right"} width={0} height={0} priority/>
+                <Image className="swiper-button-prev" style={{transform: 'rotate(180deg)', width: "20px", height: "23px", position: "absolute"}} src={arrow} alt = "left arrow" width={0} height={0}/>
+            </div>
         </Swiper>
-        <div className={stl.swiper__buttonContainer}>
-            <div className="swiper-button-next"/>
-            <div className="swiper-button-prev"/>
-        </div>
-        </section>
-        
+        </section>   
     )
 }
 

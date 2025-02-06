@@ -14,18 +14,75 @@
 
     &__container{
         width: 606px;
-        padding: 64px 0 124px 0;
+        padding: 64px 0 180px 0;
 
     }
     &__info{
-        padding: 48px 52px;
         color: var(--background);
+    }
+    &__text{
+        padding: 48px 52px;
         border: 1px solid var(--green);
         border-radius: var(--radius);
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -30px;
+            left: 53px;
+            border-left: 29px solid transparent;
+            border-right: 29px solid transparent;
+            border-top: 30px solid var(--dark);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -31px;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 30px solid var(--green);
+        }
+    }
+    &__nameAndPosition{
+        padding: 50px 0 0 80px;
+    }
+    &__name{
+        color: var(--green);
+    }
+
+    &__buttonContainer{
+        position: absolute;
+        bottom: 60px;
+        left: 25%;
+        right: 25%;
+        .swiper-button-prev:active{
+            opacity: 0.5;
+        }
+    }
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        z-index: 10;
+        cursor: pointer;
+    
+        &__bullet {
+            width: 20px;
+            height: 20px;
+            background-color: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 50%;
+            cursor: pointer;
+            &-active {
+                background-color: var(--green);
+                transform: scale(1.2);
+            }
+        }
     }
 }
 
-.swiper-button-next{
-    position: absolute;
-    bottom: 0;
-}

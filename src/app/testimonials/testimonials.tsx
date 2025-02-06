@@ -27,69 +27,89 @@ const Testimonials = () => {
         loop={true}
         effect="fade"
         centeredSlides={true}
-        pagination={{ clickable: true }}
+        pagination={{ 
+            el: ".swiper-pagination",
+            clickable: true,
+            type: "bullets",
+            renderBullet: (index, className) => {
+                return `<span class="${className} ${stl.swiper__bullet}">${index + 1}</span>`;
+            },
+        }}
         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
         >
+            <div style={{backgroundColor: 'var(--green)'}} className={`${stl.swiper__pagination} ${stl.swiper__bullet} swiper-pagination-custom`}>
+                <Image className={stl.swiper__bullet} src={arrow} alt="arrow" />
+            </div>
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
                 <div className={stl.swiper__info}>
-                    <div className={stl.swiper__text}>
+                    <p className={stl.swiper__text}>
                         "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. 
                         The team is professional, responsive, and truly cares about the success of our business. 
                         We highly recommend Positivus to any company looking to grow their online presence."
+                    </p>
+                   <div className={stl.swiper__nameAndPosition}>
+                        <h4 className={stl.swiper__name}>John Smith</h4>
+                        <p className={stl.swiper__position}>Marketing Director at XYZ Corp</p>
                     </div>
-                    John Smith
-                    Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
 
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
                 <div className={stl.swiper__info}>
-                    <div className={stl.swiper__text}>
+                    <p className={stl.swiper__text}>
                         "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. 
                         The team is professional, responsive, and truly cares about the success of our business. 
                         We highly recommend Positivus to any company looking to grow their online presence."
+                    </p>
+                    <div className={stl.swiper__nameAndPosition}>
+                            <h4 className={stl.swiper__name}>John Smith</h4>
+                        <p className={stl.swiper__position}>Marketing Director at XYZ Corp</p>
                     </div>
-                    John Smith
-                    Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
 
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
                 <div className={stl.swiper__info}>
-                    <div className={stl.swiper__text}>
+                    <p className={stl.swiper__text}>
                         "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. 
                         The team is professional, responsive, and truly cares about the success of our business. 
                         We highly recommend Positivus to any company looking to grow their online presence."
+                    </p>
+                   <div className={stl.swiper__nameAndPosition}>
+                        <h4 className={stl.swiper__name}>John Smith</h4>
+                        <p className={stl.swiper__position}>Marketing Director at XYZ Corp</p>
                     </div>
-                    John Smith
-                    Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
 
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
                 <div className={stl.swiper__info}>
-                    <div className={stl.swiper__text}>
+                    <p className={stl.swiper__text}>
                         "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. 
                         The team is professional, responsive, and truly cares about the success of our business. 
                         We highly recommend Positivus to any company looking to grow their online presence."
+                    </p>
+                   <div className={stl.swiper__nameAndPosition}>
+                        <h4 className={stl.swiper__name}>John Smith</h4>
+                        <p className={stl.swiper__position}>Marketing Director at XYZ Corp</p>
                     </div>
-                    John Smith
-                    Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
 
             <SwiperSlide style={{width: "50%"}} className={stl.swiper__container}>
                 <div className={stl.swiper__info}>
-                    <div className={stl.swiper__text}>
+                    <p className={stl.swiper__text}>
                         "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. 
                         The team is professional, responsive, and truly cares about the success of our business. 
                         We highly recommend Positivus to any company looking to grow their online presence."
+                    </p>
+                   <div className={stl.swiper__nameAndPosition}>
+                        <h4 className={stl.swiper__name}>John Smith</h4>
+                        <p className={stl.swiper__position}>Marketing Director at XYZ Corp</p>
                     </div>
-                    John Smith
-                    Marketing Director at XYZ Corp
                 </div>
             </SwiperSlide>
             <div className={stl.swiper__buttonContainer}>
@@ -97,6 +117,7 @@ const Testimonials = () => {
                 <Image className="swiper-button-prev" style={{transform: 'rotate(180deg)', width: "20px", height: "23px", position: "absolute"}} src={arrow} alt = "left arrow" width={0} height={0}/>
             </div>
         </Swiper>
+
         </section>   
     )
 }

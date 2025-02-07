@@ -16,73 +16,95 @@ const Testimonials = () => {
         loop: true,
         centeredSlides: true,
         slidesPerView: "auto", 
-        spaceBetween: 50,
+        breakpoints: {
+            0: {
+                spaceBetween: 25
+            },
+            400: {
+                spaceBetween: 50
+            },
+        },
       injectStyles: [
         `
-          .swiper-button-next,
-          .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             background-color: transparent;
             background-repeat: no-repeat;
             background-position: center;
             position: absolute;
             color: transparent;
             margin: 160px 0 0 0; 
-          }
+        }
         .swiper-button-prev:active,
         .swiper-button-next:active {
             opacity: 0.5;
         }
-
-          .swiper-button-prev {
+        .swiper-button-prev {
             background-image: url("../arrowRight.png");
             transform: rotate(180deg);
-                left: 30%;
-                cursor: pointer;
-          }
-
-          .swiper-button-next {
+            left: 30%;
+            cursor: pointer;
+        }
+        .swiper-button-next {
             background-image: url("../arrowRight.png");
             right: 30%;
             cursor: pointer;
-          }
-          
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
+        }  
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
             content: "";
-          }
+        }
         .swiper-pagination {
-      position: absolute;
-      bottom: 40px;
-      margin: 0 0 60px 0;
-      display: flex;
-      gap: 10px;
-    }
+            position: absolute;
+            margin: 0 0 60px 0;
+            display: flex;
+            gap: 10px;
+        }
+        .swiper-pagination-bullet {
+            position: relative;
+            left: 40%;
+            right: 40%;
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet::before,
+        .swiper-pagination-bullet::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            clip-path: polygon(71% 39%, 64% 60%, 71% 79%, 50% 70%, 29% 77%, 37% 60%, 30% 39%, 51% 47%);
+        }
+        .swiper-pagination-bullet-active::before,
+        .swiper-pagination-bullet-active::after {
+            background-color: #B9FF66;
+            transform: scale(1.2);
+        }
 
-    .swiper-pagination-bullet {
-      position: relative;
-      left: 40%;
-      right: 40%;
-      width: 25px;
-      height: 25px;
-      background-color: transparent;
-        opacity: 1;
-    }
-
-    .swiper-pagination-bullet::before,
-    .swiper-pagination-bullet::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-    clip-path: polygon(71% 39%, 64% 60%, 71% 79%, 50% 70%, 29% 77%, 37% 60%, 30% 39%, 51% 47%);
-    }
-
-    .swiper-pagination-bullet-active::before,
-    .swiper-pagination-bullet-active::after {
-      background-color: #B9FF66;
-      transform: scale(1.2);
-    }
+        @media (max-width: 768px) {
+            .swiper-button-prev,
+            .swiper-button-next{
+                margin: 205px 0 0 0; 
+            }
+            .swiper-button-prev {
+                left: 10%;
+                cursor: pointer;
+            }
+            .swiper-button-next {
+                right: 10%;
+            }
+            .swiper-pagination {
+                margin: 0 0 35px 0;
+                gap: 3px;
+            }
+            .swiper-pagination-bullet {
+                left: 20%;
+                right: 20%;
+            }
+        }
       `,
       ],
     };
@@ -92,7 +114,6 @@ const Testimonials = () => {
   }, []);
 
   return (
-    // <section className={stl.section}>
     <>
         <section className={stl.main}>
             <section className={stl.main__text}>
@@ -171,16 +192,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-
-//             {/* <div className={stl.swiper__buttonContainer}>
-//                 <Image className="swiper-button-next" style={{width: "20px", height: "23px"}} src={arrow} alt={"arrow right"} width={0} height={0} priority/>
-//                 <Image className="swiper-button-prev" style={{transform: 'rotate(180deg)', width: "20px", height: "23px", position: "absolute"}} src={arrow} alt = "left arrow" width={0} height={0}/>
-//             </div> */}
-//         {/* </Swiper> */}
-//         </swiper-container>
-//         </section>   
-//     );
-// };
-
-// export default Testimonials;

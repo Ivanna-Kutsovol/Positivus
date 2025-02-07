@@ -49,3 +49,23 @@
         color: var(--green);
     }
 }
+
+@media(max-width: 800px) {
+    .swiper{
+        &__text{
+            padding: 20px 25px;
+
+            &::after{
+                left: 31px;
+                bottom: -28px;;
+            }
+            &::before{
+                left: 30px;
+                bottom: -29px;
+            }
+        }
+        &__nameAndPosition{
+            padding: 45px 0 20px 50px;
+        }
+    }
+}

@@ -6,7 +6,10 @@
   --black: #000000;
   --radius: 45px;
 }
-
+.container {
+  width: 606px;
+  padding: 64px 0 180px 0;
+}
 @font-face {
   font-family: 'space-grotesk';
   src: url(../../../public/fonts/SpaceGrotesk-Medium.woff2) format("woff2"),

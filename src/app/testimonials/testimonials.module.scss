@@ -12,11 +12,6 @@
     border-radius: var(--radius);
     position: relative;
 
-    &__container{
-        width: 606px;
-        padding: 64px 0 180px 0;
-
-    }
     &__info{
         color: var(--background);
     }
@@ -53,36 +48,4 @@
     &__name{
         color: var(--green);
     }
-
-    &__buttonContainer{
-        position: absolute;
-        bottom: 60px;
-        left: 25%;
-        right: 25%;
-        .swiper-button-prev:active{
-            opacity: 0.5;
-        }
-    }
-    &__pagination {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-        z-index: 10;
-        cursor: pointer;
-    
-        &__bullet {
-            width: 20px;
-            height: 20px;
-            background-color: var(--green);
-            border: 1px solid var(--green);
-            border-radius: 50%;
-            cursor: pointer;
-            &-active {
-                background-color: var(--green);
-                transform: scale(1.2);
-            }
-        }
-    }
 }
-

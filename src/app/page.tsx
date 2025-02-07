@@ -17,7 +17,7 @@ export default function Home() {
        <CaseStudies/>
        <WorkingProcess/>
        <Team/>
-       <Testimonials/>
-    </div>
+       <Testimonials/>    
+      </div>
   );
 }

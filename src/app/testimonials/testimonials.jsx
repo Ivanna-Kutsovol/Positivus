@@ -114,7 +114,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <>
+    < section className={stl.section}>
         <section className={stl.main}>
             <section className={stl.main__text}>
             <h2 className={stl.main__topic}>Testimonials</h2>
@@ -187,7 +187,7 @@ const Testimonials = () => {
                 </div>
             </swiper-slide>
         </swiper-container>
-    </>
+    </section>
   );
 };
 

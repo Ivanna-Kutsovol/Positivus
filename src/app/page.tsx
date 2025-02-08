@@ -6,6 +6,7 @@ import CaseStudies from "./caseStudies/caseStudies"
 import WorkingProcess from "./workingProcess/workingProcess";
 import Team from "./team/team";
 import Testimonials from "./testimonials/testimonials";
+import ContactUs from "./contactUs/contactUs";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
        <CaseStudies/>
        <WorkingProcess/>
        <Team/>
-       <Testimonials/>    
+       <Testimonials/>  
+       <ContactUs/>  
       </div>
   );
 }

@@ -1,0 +1,113 @@
+@use "../styles/mixins" as *;
+
+.section{
+    padding: 0 0 100px 0;
+
+}
+.main{
+    @include text;
+}
+
+.form{
+    display: flex;
+    padding: 60px 100px 80px;
+    background-color: var(--grey);
+    border-radius: var(--radius);
+    &__illustration{
+        position: absolute;
+        right: 100px;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+    }
+    &__radio{
+        display: flex;
+        gap: 35px;
+        position: relative;
+    }
+    &__labelRadio{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        position: relative;
+    }
+    &__customRadio{
+        background-color: var(--green);
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 6px;
+        display: none;
+    }
+    &__inputRatio{
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: var(--background); 
+        border: 1px solid #000;
+        appearance: none;
+        cursor: pointer;
+    }
+    &__inputRatio:checked ~ &__customRadio{
+        display: inline;
+    }
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__label{
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+        position: relative;
+    }
+    &__topic{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    &__input{
+        padding: 0 0 0 30px;
+        height: 60px;
+        border: 1px solid #000;
+        border-radius: 15px;
+        width: 560px;
+        &::placeholder{
+            font-size: 16px;
+            line-height: 28px;
+            color: #898989;
+        }
+    }
+    &__message{
+        height: 190px;
+        resize: none;
+        &::placeholder{
+            padding: 20px 0 0 0;
+        }
+    }
+    &__errors{
+        right: 20px;
+        font-size: 15px;
+        position: absolute;
+        bottom: -25px;
+        color: red;
+    }
+    &__button{
+        background-color: var(--dark);
+        color: var(--background);
+        width: 560px !important;
+        &:hover{
+            background-color: var(--green);
+            color: var(--dark);
+        }
+        &:active{
+            background-color: var(--green);
+            color: var(--dark);
+        }
+    }
+}

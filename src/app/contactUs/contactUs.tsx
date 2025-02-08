@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import stl from "./contactUs.module.scss";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
@@ -19,6 +19,7 @@ const ContactUs = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<IForm>({
     mode: 'onBlur',
     defaultValues: {
@@ -28,8 +29,20 @@ const ContactUs = () => {
       contact_reason: "",
     },
   });
+  const [isSumbit, setIsSubmit] = useState(false);
+  const onSubmit = (data: IForm) => {
+    console.log(data);
+    setIsSubmit(true);
+    reset();
+  }
 
-  const onSubmit = (data: IForm) => console.log(data);
+  useEffect(() => {
+    if (isSumbit) {
+      setTimeout(() => {
+        setIsSubmit(false);
+      }, 2000);
+    }
+  }, [isSumbit]);
 
   return (
     <section className={stl.section}>
@@ -117,6 +130,7 @@ const ContactUs = () => {
             </label>
         </div>
             <Button type="submit" className={stl.form__button}>Send</Button>
+            {isSumbit && <p className={stl.form__success}>Message sent successfully</p>}
         </form>
         <Image
           src={illustration}

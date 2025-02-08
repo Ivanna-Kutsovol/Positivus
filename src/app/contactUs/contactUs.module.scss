@@ -72,7 +72,7 @@
         line-height: 28px;
     }
     &__input{
-        padding: 0 0 0 30px;
+        padding: 20px 20px 30px;
         height: 60px;
         border: 1px solid #000;
         border-radius: 15px;
@@ -86,9 +86,6 @@
     &__message{
         height: 190px;
         resize: none;
-        &::placeholder{
-            padding: 20px 0 0 0;
-        }
     }
     &__errors{
         right: 20px;
@@ -110,7 +107,47 @@
             color: var(--dark);
         }
     }
+    &__success{
+        position: fixed;
+        width: 400px;
+        inset: 0; 
+        margin: auto;
+        height: 150px;
+        background-color: var(--green);
+        color: var(--dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        border-radius: 15px;
+        animation: fadeInOut 2s ease-in-out forwards;
+
+    }
 }
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform:  scale(0.5);
+      visibility: hidden;
+    }
+    10% {
+      opacity: 1;
+      transform:  scale(1.1);
+      visibility: visible;
+    }
+    90% {
+      opacity: 1;
+      transform:  scale(1.1); 
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      transform:  scale(0.5);
+      visibility: hidden;
+    }
+  }
 
 @media(max-width: 800px){
     .form{
@@ -127,6 +164,9 @@
         }
         &__label{
             gap: 10px
+        }
+        &__success{
+            width: 300px;
         }
     }
 }

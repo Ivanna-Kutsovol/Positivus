@@ -116,7 +116,6 @@ const ContactUs = () => {
                 {errors.message && <p className={stl.form__errors}>{errors.message.message}</p>}            
             </label>
         </div>
-
             <Button type="submit" className={stl.form__button}>Send</Button>
         </form>
         <Image

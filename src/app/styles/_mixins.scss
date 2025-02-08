@@ -92,20 +92,17 @@
     }
 
     @media(max-width: 800px) {
-        .main{
-            &__text{
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 0 0 40px 0;
-            }
-            &__descriptionText{
-                width: fit-content;
-            }
+        &__text{
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 0 40px 0;
         }
-        
+        &__descriptionText{
+            width: fit-content;
+        }        
     }
 }
 

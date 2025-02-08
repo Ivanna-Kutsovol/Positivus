@@ -76,7 +76,7 @@
         height: 60px;
         border: 1px solid #000;
         border-radius: 15px;
-        width: 560px;
+        max-width: 35rem;
         &::placeholder{
             font-size: 16px;
             line-height: 28px;
@@ -108,6 +108,25 @@
         &:active{
             background-color: var(--green);
             color: var(--dark);
+        }
+    }
+}
+
+@media(max-width: 800px){
+    .form{
+        padding: 40px 20px 50px;
+        display: block;
+        &__illustration{
+            display: none;
+        }
+        &__button{
+            width: 100% !important;
+        }
+        &__radio{
+            justify-content: center;
+        }
+        &__label{
+            gap: 10px
         }
     }
 }

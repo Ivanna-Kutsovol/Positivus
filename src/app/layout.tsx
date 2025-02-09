@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/header/header";
 import "../app/styles/App.scss";
 import { ReactNode } from "react";
+import Footer from "@/components/layout/footer/footer";
 
 export const metadata: Metadata = {
   title: "Positivus",
@@ -18,6 +19,7 @@ export default function RootLayout({children}: RootLayoutProps) {
       <body>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

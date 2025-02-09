@@ -40,13 +40,13 @@ const Testimonials = () => {
             opacity: 0.5;
         }
         .swiper-button-prev {
-            background-image: url("../arrowRight.png");
+            background-image: url("../arrowRight.webp");
             transform: rotate(180deg);
             left: 30%;
             cursor: pointer;
         }
         .swiper-button-next {
-            background-image: url("../arrowRight.png");
+            background-image: url("../arrowRight.webp");
             right: 30%;
             cursor: pointer;
         }  

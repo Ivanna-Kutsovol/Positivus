@@ -55,10 +55,10 @@ const Footer = () => {
             </nav>
             <div className={stl.footer__social}>
             <a href="https://www.linkedin.com/in/ivanna-kucovol" target="_blank" rel="noopener noreferrer">
-                <Image src={Linkedin} width={30} height={30} alt="LinkedIn" />
+                <Image className={stl.footer__socialIcon} src={Linkedin} width={30} height={30} alt="LinkedIn" />
             </a>    
-                <Image src={Facebook} width={30} height={30} alt="facebook"/>
-                <Image src={Twitter} width={30} height={30} alt="twitter"/>
+                <Image className={stl.footer__socialIcon} src={Facebook} width={30} height={30} alt="facebook"/>
+                <Image className={stl.footer__socialIcon} src={Twitter} width={30} height={30} alt="twitter"/>
             </div>
             </div>
             <div className={stl.footer__main}>
@@ -76,6 +76,7 @@ const Footer = () => {
                 <input
                     type="email"
                     className={stl.footer__input}
+                    autoComplete="email" 
                     placeholder="Email"
                     {...register("email", {
                     required: "Email is required",

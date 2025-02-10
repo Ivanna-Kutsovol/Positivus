@@ -12,16 +12,15 @@
     &__list{
         display: flex;
         gap: 40px;
-        text-decoration-line: underline;
         font-size: 18px;
     }
     &__social{
         display: flex;
         gap: 20px;
+        cursor: pointer;
     }
     &__main{
         display: flex;
-        justify-content: space-between;
         padding: 0 0 50px 0;
         gap: 135px;
     }
@@ -52,7 +51,7 @@
     }
     &__input,
     &__button{
-        height: 70px;
+        height: 70px !important;
     }
     &__button{
         width: 250px !important;
@@ -91,6 +90,14 @@
     &__link{
         text-decoration-line: underline;
         font-size: 18px;
+        &:hover{
+            text-decoration-line: none;
+        }
+    }
+    &__socialIcon{
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 }
 .line{
@@ -98,4 +105,67 @@
     width: 78%;
     height: 1px;
     background-color: var(--background);
+}
+
+@media(max-width: 800px){
+    .footer{
+        padding: 30px 40px 40px;
+        width: calc(100% + 40px);
+        border-radius: 0;
+        left: -20px;
+        position: relative;
+        overflow: hidden !important;
+        &__top{
+            flex-direction: column;
+            gap: 40px;
+            padding: 0 0 40px 0;
+            align-items: center;
+        }
+        &__list{
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        &__main{
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 0 0 80px;
+        }
+        &__logo{
+            width: fit-content;
+            > img{
+                height: auto;
+                width: 140px;
+            }
+        }
+        &__social{
+            position: absolute;
+            bottom: 170px;
+        }
+        &__contactUs{
+            align-items: center;
+        }
+        &__info{
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+        &__form{
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+        &__button{
+            width: 100% !important;
+        }
+        &__bottom{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .line{
+        width: 80%;
+    }
+    
 }

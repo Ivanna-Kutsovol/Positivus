@@ -84,6 +84,8 @@ const ContactUs = () => {
             <span className={stl.form__topic} >Name</span>
           <input
             type="text"
+            id="name"
+            autoComplete="name" 
             className={stl.form__input}
             placeholder="Name"
             {...register("name", {
@@ -100,6 +102,8 @@ const ContactUs = () => {
                 <span className={stl.form__topic} >Email<abbr>*</abbr></span>
             <input
             type="email"
+            id="email"
+            autoComplete="email" 
             className={stl.form__input}
             placeholder="Email"
             {...register("email", {
@@ -117,6 +121,8 @@ const ContactUs = () => {
                 <span className={stl.form__topic} >Message <abbr>*</abbr></span>
             <textarea
             placeholder="Message"
+            id="message"
+            autoComplete="message" 
             className={`${stl.form__input} ${stl.form__message}`}
             {...register("message", {
                 required: "Message is required",

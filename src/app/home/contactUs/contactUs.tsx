@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import stl from "./contactUs.module.scss";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-import illustration from "../../../public/illustrationContactUS.webp";
+import illustration from "../../../../public/illustrationContactUS.webp";
 import Button from "@/components/UI/button/button";
 
 export interface IForm {

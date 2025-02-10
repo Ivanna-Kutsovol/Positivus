@@ -1,7 +1,7 @@
 import React from "react";
 import stl from "./article.module.scss";
 import Image from "next/image";
-import Ilustration from "/public/articleImgFirst.webp";
+import Ilustration from "../../../../public/articleImgFirst.webp";
 import Button from "@/components/UI/button/button";
 
 const ArticleFirst = () => {

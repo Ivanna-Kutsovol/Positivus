@@ -52,19 +52,19 @@ export default function Header() {
                 <nav className={stl.nav} onClick={tooggleMenu}>
                 <ul className={stl.nav__list} >
                     <li className={stl.nav__item}>
-                        <Link className={stl.nav__link} href="/">About us</Link>
+                        <Link className={stl.nav__link} href="/about-us">About us</Link>
                     </li>
                     <li className={stl.nav__item}>
-                        <Link className={stl.nav__link} href="/">Services</Link>
+                        <Link className={stl.nav__link} href="/services">Services</Link>
                     </li>
                     <li className={stl.nav__item}>
-                        <Link className={stl.nav__link} href="/">Use Cases</Link>
+                        <Link className={stl.nav__link} href="/use-cases">Use Cases</Link>
                     </li>
                     <li className={stl.nav__item}>
-                        <Link className={stl.nav__link} href="/">Pricing</Link>
+                        <Link className={stl.nav__link} href="/pricing">Pricing</Link>
                     </li>
                     <li className={stl.nav__item}>
-                        <Link className={stl.nav__link} href="/">Blog</Link>
+                        <Link className={stl.nav__link} href="/blog">Blog</Link>
                     </li>
                     <Button type="submit" className={stl.button}>Request a quote</Button>
                 </ul>

@@ -1,13 +1,11 @@
 import React from "react";
 import stl from "./services.module.scss";
-import Image from "next/image";
 import first from "/public/services/cardIllustrationFirst.webp";
 import fifth from "/public/services/cardIllustrationFifth.webp";
 import second from "/public/services/cardIllustrationSecond.webp";
 import third from "/public/services/cardIllustrationThird.webp";
 import fourth from "/public/services/cardIllustrationFourth.webp";
 import sixth from "/public/services/cardIllustrationSixth.webp";
-import Link from "next/link";
 import { Card } from "@/components/cards/service";
 
 const cards = [{

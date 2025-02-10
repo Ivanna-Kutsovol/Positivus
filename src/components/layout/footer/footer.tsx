@@ -37,19 +37,19 @@ const Footer = () => {
             <nav className={stl.footer__nav}>
                 <ul className={stl.footer__list}>
                     <li className={stl.footer__item}>
-                        <Link className={stl.footer__link} href="#">About us</Link>
+                        <Link className={stl.footer__link} href="/about-us">About us</Link>
                     </li>
                     <li className={stl.footer__item}>
-                        <Link className={stl.footer__link} href="#">Services</Link>
+                        <Link className={stl.footer__link} href="/services">Services</Link>
                     </li>
                     <li className={stl.footer__item}>
-                        <Link className={stl.footer__link} href="#">Use Cases</Link>
+                        <Link className={stl.footer__link} href="use-cases">Use Cases</Link>
                     </li>
                     <li className={stl.footer__item}>
-                        <Link className={stl.footer__link} href="#">Pricing</Link>
+                        <Link className={stl.footer__link} href="pricing">Pricing</Link>
                     </li>
                     <li className={stl.footer__item}>
-                        <Link className={stl.footer__link} href="#">Blog</Link>
+                        <Link className={stl.footer__link} href="blog">Blog</Link>
                     </li>
                 </ul>
             </nav>
@@ -64,12 +64,12 @@ const Footer = () => {
             <div className={stl.footer__main}>
                 <div className={stl.footer__contactUs}>
                     <h4 className={stl.footer__title}>Contact us</h4>
-                    <div className={stl.footer__info}>
-                        <p className={stl.footer__contact}>Email: info@positivus.com</p>
-                        <p className={stl.footer__contact}>Phone: 555-567-8901</p>
+                    <address className={stl.footer__info}>
+                        <a href="mailto: ivannakucovol@gmail.com" className={stl.footer__contact}>Email: info@positivus.com</a>
+                        <a href="tel:555-567-8901" className={stl.footer__contact}>Phone: 555-567-8901</a>
                         <p className={stl.footer__contact}>Address: 1234 Main St
                         Moonstone City, Stardust State 12345</p>
-                    </div>
+                    </address>
                 </div>
 
                 <form className={stl.footer__form} onSubmit={handleSubmit(onSubmit)}>

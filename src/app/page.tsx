@@ -1,12 +1,12 @@
-import Hero from "./hero/hero";
-import LogoSlider from "./logoSlider/logoSlider";
-import Services from "./services/services";
-import ArticleFirst from "./article/article";
-import CaseStudies from "./caseStudies/caseStudies"
-import WorkingProcess from "./workingProcess/workingProcess";
-import Team from "./team/team";
-import Testimonials from "./testimonials/testimonials";
-import ContactUs from "./contactUs/contactUs";
+import Hero from "./home/hero/hero";
+import LogoSlider from "./home/logoSlider/logoSlider";
+import Services from "./home/services/services";
+import ArticleFirst from "./home/article/article";
+import CaseStudies from "./home/caseStudies/caseStudies"
+import WorkingProcess from "./home/workingProcess/workingProcess";
+import Team from "./home/team/team";
+import Testimonials from "./home/testimonials/testimonials";
+import ContactUs from "./home/contactUs/contactUs";
 
 export default function Home() {
   return (

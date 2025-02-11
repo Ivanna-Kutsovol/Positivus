@@ -1,6 +1,6 @@
 import Hero from "./hero/hero";
-import OurImpact from "./ourImpact/ourImpact";
-import OurJourney from "./ourJourney/ourJourney";
+import OurImpact from "./impact/impact";
+import OurJourney from "./journey/journey";
 
 export default function AboutUS(){
     return(

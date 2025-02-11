@@ -1,9 +1,9 @@
 import React from "react";
-import stl from "./ourJourney.module.scss";
+import stl from "./journey.module.scss";
 import Image from "next/image";
-import Circles from "../../../../public/aboutUs/ourJourney/circlesOurJourney.png";
-import Star from "../../../../public/aboutUs/ourJourney/star.png";
-import LIne from "../../../../public/aboutUs/ourJourney/line.webp";
+import Circles from "../../../../public/aboutUs/ourJourneyIllustration/circlesOurJourney.png";
+import Star from "../../../../public/aboutUs/ourJourneyIllustration/star.png";
+import LIne from "../../../../public/aboutUs/ourJourneyIllustration/line.webp";
 
 const OurJourney = () => {
     return(

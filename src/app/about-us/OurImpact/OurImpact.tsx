@@ -1,5 +1,5 @@
 import React from "react";
-import stl from "./OurImpact.module.scss";
+import stl from "./ourImpact.module.scss";
 import Image from "next/image";
 
 const OurImpact = () => {

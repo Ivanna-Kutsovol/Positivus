@@ -1,0 +1,72 @@
+@use '../../styles/mixins' as text;
+
+.section{
+    padding: 0 0 140px 0;
+}
+.main{
+    @include text.text;
+    &__containerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        position: relative;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    &__contentLeft{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: end;
+    }
+    &__container{
+        width: 600px;
+        height: 240px;
+        background-color: var(--dark);
+        border-radius: var(--radius);
+        display: flex;
+        gap: 60px;
+        color: var(--background);
+        padding: 40px 140px 40px 40px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__right1{
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 600px;
+    }
+    &__right2{
+        display: flex;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &__circles{
+        position: absolute;
+        left: -200px;
+        top: 280px;
+    }
+    &__circles2{
+        position: absolute;
+        right: -200px;
+        bottom: 320px;
+        transform: rotate(180deg);
+    }
+    &__line{
+        position: absolute;
+        overflow: hidden;
+        left: 230px;
+        top: 100px;
+    }
+    &__year{
+        width: 132px;
+    }
+}

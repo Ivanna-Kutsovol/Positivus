@@ -1,7 +1,9 @@
+import Hero from "./hero/hero";
+
 export default function AboutUS(){
     return(
         <div>
-            About US
+            <Hero/>
         </div>
     )
 }

@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    gap: 140px;
+    margin: 70px 0 70px 0;
+    padding: 64px 90px;
+    align-items: center;
+    background-color: var(--grey);
+    border-radius: var(--radius);
+    position: relative;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    &__title{
+        line-height: 80px;
+    }
+    &__description{
+        line-height: 32px;
+        font-weight: 200;
+    }
+}
+
+@media(max-width: 800px) {
+    .main{
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+        margin: 110px 0 60px 0;
+        background-color: transparent;
+        &__content{
+            gap: 20px;
+        }
+        &__ilustration{
+            height: auto;
+            width: 340px;
+        }
+        &__title{
+            position: absolute;
+            top: -80px;
+            line-height: normal;
+        }
+    }
+}

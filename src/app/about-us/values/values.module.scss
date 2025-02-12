@@ -1,0 +1,51 @@
+@use "../../styles/mixins" as *;
+
+.section{
+    padding: 0 0 100px 0;
+}
+
+.main{
+    @include text;
+    @include container;
+    &__container{
+        gap: 40px;
+    }
+    &__content{
+        justify-content: flex-start;
+        gap: 80px;
+        position: relative;
+    }
+}
+.line{
+    border: 1px solid #000;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+}
+
+@media(max-width: 800px) {
+    .main{
+        &__container{
+            display: flex;
+            flex-direction: column;
+            width: calc(100% + 20px);
+            left: 0;
+            margin: -10px;
+            height: fit-content;
+        }
+        &__content{
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__illustration{
+            position: relative;
+            right: 0;
+            bottom: 0;
+            height: auto;
+            width: 230px;
+        }
+    }
+    .line{
+        top: 40px;
+    }
+}

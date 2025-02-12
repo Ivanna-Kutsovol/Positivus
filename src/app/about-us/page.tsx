@@ -1,3 +1,4 @@
+import Article from "./article/article";
 import Hero from "./hero/hero";
 import OurImpact from "./impact/impact";
 import OurJourney from "./journey/journey";
@@ -10,6 +11,7 @@ export default function AboutUS(){
             <OurImpact/>
             <OurJourney/>
             <Values/>
+            <Article/>
         </div>
     )
 }

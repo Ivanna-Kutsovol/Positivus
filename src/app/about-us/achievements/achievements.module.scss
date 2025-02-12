@@ -1,0 +1,56 @@
+@use "../../styles/mixins" as text;
+
+.main {
+    @include text.text;
+}
+.container {
+    display: flex;
+    gap: 40px;
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--grey);
+        border-radius: var(--radius);
+        padding: 10px 30px 55px;
+        gap: 10px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__title{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    &__description{
+        font-size: 16px;
+        font-weight: lighter;
+    }
+}
+
+@media(max-width: 800px){
+    .main{
+        &__topic{
+            width: 370px;
+        }
+    }
+    .container{
+        gap: 15px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: calc(100% + 20px);
+        margin: -10px;
+        position: relative;
+        left: 0;
+        &__content{
+            padding: 0px 10px 40px;
+            width: 170px;
+        }
+        &__image{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

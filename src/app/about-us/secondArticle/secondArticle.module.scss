@@ -1,0 +1,25 @@
+.main {
+    margin: 100px 0 100px 0;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 60px;
+    border-radius: var(--radius);
+    border: 1px solid var(--black);
+    border-bottom: 6px solid var(--black);
+    gap: 180px;
+    &__content{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+    &__submit{
+        color: var(--background);
+        background-color: var(--dark);
+        &:hover{
+            background-color: var(--grey);
+            color: var(--dark);
+        }
+    }
+}

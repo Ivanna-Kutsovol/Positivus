@@ -15,7 +15,7 @@ const secondArticle = () =>{
             </section>
             <Image src={Illustration} className={stl.image} alt="illustration" width={330} height={330}/>
         </article>
-    )
+    );
 }
 
 export default secondArticle;

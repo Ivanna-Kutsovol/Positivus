@@ -69,4 +69,65 @@
     &__year{
         width: 132px;
     }
+    &__starMini{
+        display: none;
+    }
+}
+
+.line{
+    display: none;
+}
+
+@media(max-width: 800px){
+    .main{
+        &__containerContent{
+            width: calc(100% + 20px);
+            margin: -10px;
+            left: 0;
+        }
+        &__contentLeft{
+            justify-content: start;
+            flex-direction: column;
+            position: relative;
+        }
+        &__content{
+            flex-direction: column;
+            position: relative;
+        }
+        &__container{
+            gap: 44px;
+            padding: 40px;
+            width: 100%;
+            height: fit-content;
+        }
+        &__circles{
+            display: none;
+        }
+        &__circles2{
+            display: none;
+        }
+        &__line{
+            display: none;
+        }
+        &__year{
+            padding: 0 0 0 90px;
+        }
+        &__star{
+            position: absolute;
+            top: 7px;
+            left: 32px;
+        }
+        &__starMini{
+            display: block;
+        }
+    }
+    .line{
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 84%;
+        background-color: var(--green);
+        left: 48px;
+        top: 10px;
+    }
 }

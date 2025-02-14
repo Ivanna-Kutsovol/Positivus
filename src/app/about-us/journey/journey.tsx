@@ -4,6 +4,7 @@ import Image from "next/image";
 import Circles from "../../../../public/aboutUs/ourJourneyIllustration/circlesOurJourney.png";
 import Star from "../../../../public/aboutUs/ourJourneyIllustration/star.png";
 import LIne from "../../../../public/aboutUs/ourJourneyIllustration/line.webp";
+import StarMobile from "../../../../public/aboutUs/ourJourneyIllustration/starMobile.webp"
 
 const OurJourney = () => {
     return(
@@ -22,6 +23,7 @@ const OurJourney = () => {
                     <h1 className={stl.main__year}>2019</h1>
                     <div className={stl.main__container}>
                         <Image className={stl.main__star} src={Star} alt="Star" width={35} height={35} priority />
+                        <Image className={stl.main__starMini} src={StarMobile} alt="Star mini" width={18} height={18} priority />
                         <div className={stl.main__info}>
                             <h3>The Beginning</h3>
                             <p>Positivus was founded to help businesses navigate the digital world and achieve online success.</p>
@@ -32,6 +34,7 @@ const OurJourney = () => {
                     <h1 className={stl.main__year}>2021</h1>
                     <div className={stl.main__container}>
                         <Image className={stl.main__star} src={Star} alt="Star" width={35} height={35} priority />
+                        <Image className={stl.main__starMini} src={StarMobile} alt="Star mini" width={18} height={18} priority />
                         <div className={stl.main__info}>
                             <h3>Industry Recognition</h3>
                             <p>Positivus was named among the top 50 global digital agencies, affirming our leadership.</p>
@@ -42,6 +45,7 @@ const OurJourney = () => {
                     <h1 className={stl.main__year}>2023</h1>
                     <div className={stl.main__container}>
                         <Image className={stl.main__star} src={Star} alt="Star" width={35} height={35} priority />
+                        <Image className={stl.main__starMini} src={StarMobile} alt="Star mini" width={18} height={18} priority />
                         <div className={stl.main__info}>
                             <h3>Innovation and Growth</h3>
                             <p>With over 50 experts, we continue to deliver cutting-edge solutions to help businesses thrive.</p>
@@ -52,6 +56,7 @@ const OurJourney = () => {
                     <h1 className={stl.main__year}>2024</h1>
                     <div className={stl.main__container}>
                         <Image className={stl.main__star} src={Star} alt="Star" width={35} height={35} priority />
+                        <Image className={stl.main__starMini} src={StarMobile} alt="Star mini" width={18} height={18} priority />
                         <div className={stl.main__info}>
                             <h3>Leading the Future</h3>
                             <p>This year, Positivus is pioneering the use of AI and automation to deliver even more personalized, 
@@ -59,6 +64,7 @@ const OurJourney = () => {
                         </div>
                     </div>
                 </div>
+                <span className={stl.line}/>
                 <Image src={Circles} alt="Circles" className={stl.main__circles2} width={420} height={150} priority />
             </section>
         </section>

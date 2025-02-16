@@ -35,8 +35,8 @@ const Values = () => {
         <section>
         <div className={stl.main__section}>
         {card.map((cardsContent, index) => (
-            <div>
-            <div key={`card-${index}`} className={`${stl[`main__container-${index}`]} ${stl.main__container}`}>
+            <div key={`card-${index}`}>
+            <div className={`${stl[`main__container-${index}`]} ${stl.main__container}`}>
                 <div className={stl.main__content}>
                     <h3 className={stl.main__title}>
                         {cardsContent.title}

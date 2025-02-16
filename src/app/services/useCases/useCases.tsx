@@ -1,9 +1,8 @@
 import React from 'react';
 import stl from './useCases.module.scss'
 import Case from '@/components/cards/case/case';
-import { title } from 'process';
 
-const cart = [
+const cases = [
     {
         title: 'E-commerce Fashion Brand',
         description: 'We implemented a tailored SEO strategy that boosted organic search rankings, leading to a 150% increase in website traffic and a 50% rise in online sales within six months.'
@@ -28,12 +27,13 @@ const UseCases = () => {
                 </section>
             </section>
             <section className={stl.mainCards}>
-                {cart.map((content, index) => (
+                {cases.map((content, index) => (
                     <Case
                         key={index}
                         classNameMain={stl.mainCards__container}                    
                         classNameDescription={stl.mainCards__description}
                         title={content.title}
+                        classNameTitle={stl.mainCards__title}
                         description={content.description}
                         className={stl[`main__line-${index}`]}
                     />

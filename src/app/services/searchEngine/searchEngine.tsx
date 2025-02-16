@@ -1,7 +1,7 @@
 import React from "react";
 import stl from "./searchEngine.module.scss";
 import Image from "next/image";
-import Star from "../../../../public/aboutUs/illustration.webp";
+import Star from "../../../../public/aboutUs/ourJourneyIllustration/star.png";
 import Button from "@/components/UI/button/button";
 import starMobile from "../../../../public/aboutUs/ourJourneyIllustration/starMobile.webp";
 

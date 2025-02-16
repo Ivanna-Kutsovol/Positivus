@@ -1,0 +1,36 @@
+@use '../../styles/mixins' as *;
+
+.main{
+    @include text;
+    @include container;
+    padding: 0 0 100px 0;
+    position: relative;
+    &__title{
+        background-color: var(--background);
+    }
+    &__container{
+        background-color: var(--grey);
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        left: 0;
+        &::before{
+            @include buttonArrow;
+            background-color: var(--dark);
+            color: var(--green)
+        }
+        &:hover::before{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .main{
+        padding: 0 0 50px 0;
+        &__button{
+            visibility: hidden;
+        }
+    }
+}

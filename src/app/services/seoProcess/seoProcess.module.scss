@@ -1,0 +1,28 @@
+@use '../../styles/mixins' as text;
+
+.section{
+    padding: 0 0 100px 0;
+}
+
+.main{
+    @include text.text;
+    &__container{
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+    &__content{
+        display: flex;
+        gap: 60px;
+        background-color: var(--grey);
+        padding: 45px 50px;
+        border-radius: var(--radius);
+        justify-content: center;
+    }
+    &__textContent{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

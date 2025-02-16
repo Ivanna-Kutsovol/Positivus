@@ -1,0 +1,16 @@
+@use '../../styles/mixins' as *;
+.section{
+    padding: 0 0 100px 0;
+}
+.main{
+    @include text;
+}
+.mainCards{
+    @include main;
+}
+
+@media(max-width: 800px) {
+    .section{
+        padding: 0 0 50px 0;
+    }
+}

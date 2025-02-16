@@ -16,7 +16,7 @@ export const Case :React.FC<CaseProps> = ({className = '', title, description, c
             <section className={classNameTitle}>
             {title?.split(`\n`).map((line, i) => (
                 <React.Fragment key={i}>
-                    {line}
+                    <h3>{line}</h3>
                 </React.Fragment>
             ))} 
             </section>

@@ -26,3 +26,23 @@
         justify-content: center;
     }
 }
+
+@media(max-width: 800px){
+    .main{
+        &__container{
+            gap: 20px;
+        }
+        &__content{
+            gap: 20px;
+            padding: 35px 30px;
+        }
+        &__image{
+            width: 46px;
+            height: 46px;            
+        }
+        &__textContent{
+            gap: 15px;
+        }
+    }
+    
+}

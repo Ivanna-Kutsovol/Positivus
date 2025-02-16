@@ -55,7 +55,7 @@ const SeoProcess = () => {
             <section className={stl.main__container}>
                 {content.map((cart, index) => (
                     <div className={stl.main__content}>
-                        <Image src={cart.img} className={stl.main__img} alt="image" width={140} height={140}/>
+                        <Image src={cart.img} className={stl.main__image} alt="image" width={140} height={140}/>
                         <div className={stl.main__textContent}>
                             <h3 className={stl.main__title}>{cart.title}</h3>
                             <p className={stl.main__description}>{cart.description}</p>

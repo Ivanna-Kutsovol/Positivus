@@ -1,3 +1,4 @@
+import Article from "./article/article";
 import Hero from "./hero";
 import OtherServices from "./otherServices/otherServices";
 import SearchEngine from "./searchEngine/searchEngine";
@@ -12,6 +13,7 @@ export default function Services(){
             <SeoProcess/>
             <UseCases/>
             <OtherServices/>
+            <Article/>
         </div>
     )
 

@@ -3,11 +3,11 @@
     flex-direction: row;
     justify-content: flex-start;
     height: 345px;
-    width: -webkit-fill-available;
+    width: 100%;
     padding: 60px;
     margin: 0 0 140px 0;
-    background-color:var(--grey);
-    border-radius: 45px;
+    background-color:var(--green);
+    border-radius: var(--radius);
     position: relative;
 
     &__content {
@@ -16,16 +16,16 @@
         justify-content: space-between;
         width: 45%;
     }
-    &__illustration {
+    &__image{
         position: absolute;
-        right: 0;
+        right: 135px;
         top: -20px;
     }
     &__button{
         background-color: var(--dark);
         color: var(--background);
         &:hover{
-            background-color: var(--green);
+            background-color: var(--grey);
             color: var(--dark);
         }
     }
@@ -35,12 +35,21 @@
     .main{
         padding: 45px;
         margin: 0 0 50px 0;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        gap: 25px;
 
-        &__illustration{
-            display: none;
+        &__image{
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 120%;
+            height: auto;
         }
         &__content{
             width: 100%;
+            gap: 25px;
         }
         &__button{
             width: 100%;

@@ -15,7 +15,7 @@ const ArticleFirst = () => {
                 </p>
                 <Button className={stl.main__button}>Get your proposal</Button>
             </section>
-            <Image src={Ilustration} alt="Ilustration article" className={stl.main__ilustration} width={495} height={395} priority />
+            <Image src={Ilustration} alt="Ilustration article" className={stl.main__illustration} width={495} height={395} priority />
         </article>
     );
 }

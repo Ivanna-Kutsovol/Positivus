@@ -39,7 +39,7 @@ const Achievements = () => {
             </section>
             <div className={stl.container}>
                 {content.map((cart, index) => (
-                    <div className={stl.container__content}>
+                    <div key={index} className={stl.container__content}>
                         <Image className={stl.container__image} src={cart.image} alt="image" width={220} height={230} />
                         <div className={stl.container__text}>
                             <p className={stl.container__title}> {cart.title} </p>

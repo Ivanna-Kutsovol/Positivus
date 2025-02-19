@@ -1,13 +1,24 @@
 @mixin main{
     display: flex;
     padding: 70px 60px;
-    background-color: var(--dark);
     border-radius: var(--radius);
-    color: var(--background);
+    border: 1px solid var(--dark);
     gap: 128px;
     position: relative;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: nowrap;
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 55%;
+        background-color: var(--background);
+        right: 33%;
+    }
+    &::after{
+        left: 33%;
+    }
     &__description{
         width: 290px;
         overflow-wrap: break-word;
@@ -20,59 +31,73 @@
         gap: 20px;
         position: relative;
         align-items: flex-start;
-        ::before{
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 140px;
-            background-color: var(--background);
-            right: -60px;
-            bottom: 0px;
-            top: 0px;
+    }
+    &__leanMore{
+        display: flex;
+        align-items: center;
+        &::after{
+            font-weight: 600;
         }
+        &:hover::after,
+        &:hover::before{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    }
+    &__text{
+        font-size: 20px;
     }
     @media(max-width: 1024px) {
-            justify-content: space-between;
-            padding: 50px 40px;
-            gap: 0;
-            &__container{
-                ::before{
-                    display: none;
-                }
-            }
-            &__description{
-                font-size: 16px;
-            }
+        justify-content: space-between;
+        padding: 50px 40px;
+        gap: 0;
+        &::before, &::after{
+            display: none;
+        }
+        &__description{
+            font-size: 16px;
+        }
     }
     @media(max-width: 800px) {
-            background-color: var(--background);
-            padding: 0px;
-            line-height: 22px;
-            overflow: auto;
-            overflow: scroll;
-            gap: 15px;
-            border-radius: 0;
-            position: relative;
-            justify-content: flex-start;
-            margin: 0 -20px 0 -20px;
-            padding: 0 20px 0 20px;
-            &__container{
-                background-color: var(--dark);
-                border-radius: var(--radius);
-                ::after{
-                    display: none;
-                }
-            }
-            &__description{
-                width: 300px;
-                padding: 20px 40px 0 40px;
-                font-size: 16px;
-            }
-            &::-webkit-scrollbar {
-                width: 0;
-              }
+        background-color: var(--background);
+        padding: 0px;
+        line-height: 22px;
+        overflow: auto;
+        overflow: scroll;
+        gap: 15px;
+        border-radius: 0;
+        position: relative;
+        justify-content: flex-start;
+        margin: 0 -20px 0 -20px;
+        padding: 0 20px 0 20px;
+        border: none;
+        &::before, &::after{
+            display: none;
         }
-  }
+        &__container{
+            border-radius: var(--radius);
+            padding: 20px 40px 0 40px;
+            width: 300px;
+            border: 1px solid var(--dark);
+        }
+        &__description{
+            width: 200px;
+            font-size: 16px;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        &__leanMore{
+            padding: 0 0 40px 0;
+            position: relative;
+            &:hover::after{
+                transform: none;
+            }
+            &:active::after{
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+        }
+    }
+}
 
 @mixin text{
     &__text{

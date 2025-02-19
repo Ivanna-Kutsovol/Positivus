@@ -1,0 +1,57 @@
+@use "../../styles/mixins" as *;
+
+.section{
+    padding: 0 0 100px 0;
+}
+.main{
+    @include text;
+}
+.mainCards{
+    @include main;
+    justify-content: space-between;
+    gap: 100px;
+    position: relative;
+    flex-wrap: wrap;
+    &::before, &::after {
+        height: 80%;
+        background-color: var(--black);
+    }
+    &__line {
+        content: "";
+        position: absolute;
+        width: 90%; 
+        height: 1px;
+        background-color: var(--black);
+        top: 50%;
+    }
+    &__container{
+        width: 300px;
+    }
+    &__leanMore{
+        &::before{
+            background-color: var(--green);
+            @include buttonArrow;
+        }
+    }
+}
+@media(max-width: 800px) {
+    .mainCards{
+        &__line{
+            display: none;
+        }
+        &__container{
+            width: 100% !important;
+            border-bottom: 6px solid var(--black);
+        }
+        &__description{
+            width: 100% !important;
+        }
+        &__leanMore{
+            &::before{
+                left: 110px;
+                bottom: 30px; 
+            }   
+        }
+    }
+}
+

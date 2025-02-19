@@ -7,6 +7,14 @@
 }
 .mainCards{
     @include main;
+    background-color: var(--dark);
+    color: var(--background);
+    &__leanMore{
+        color: var(--green);
+        &::after{
+            @include buttonArrow;
+        }
+    }
 }
 
 @media(max-width: 800px) {
@@ -14,14 +22,18 @@
         padding: 0 0 50px 0;
     }
     .mainCards{
-        &__description{
-            width: 330px;
-            padding: 0 40px 0 40px;
-        }
         &__title{
             width: 220px;
-            padding: 20px 0 0 40px;
             line-height: 30px;
+        }
+        &__container{
+            background-color: var(--dark);
+        }  
+        &__leanMore{
+            &::after{
+                left: 110px;
+                bottom: 30px;
+            }
         }
     }
 }

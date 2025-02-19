@@ -1,5 +1,4 @@
 import React from 'react';
-import stl from "./case.module.scss"
 
 interface CaseProps {
     className?: string;
@@ -8,9 +7,12 @@ interface CaseProps {
     classNameMain?: string;
     classNameTitle?: string;
     classNameDescription?: string;
+    classNameButton?: string;
+    classNameTextMore?: string;
 }
 
-export const Case :React.FC<CaseProps> = ({className = '', title, description, classNameMain='',classNameTitle='', classNameDescription=''}) => {
+export const Case :React.FC<CaseProps> = ({className = '', title, description, classNameMain='',classNameTitle='', classNameDescription='', classNameButton='', 
+    classNameTextMore=''}) => {
     return (
         <section className={classNameMain}>
             <section className={classNameTitle}>
@@ -27,8 +29,8 @@ export const Case :React.FC<CaseProps> = ({className = '', title, description, c
                 </div>
             ))}
             </section>
-            <div className={stl.leanMore}>
-                <button className={stl.leanMore__text}>Lean more</button>
+            <div className={classNameButton}>
+                <button className={classNameTextMore}>Lean more</button>
             </div>
         </section>
     )

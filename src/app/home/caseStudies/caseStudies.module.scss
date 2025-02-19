@@ -5,13 +5,33 @@
 
 .main{
     @include text;
+    
 }
 .mainCards{
     @include main;
+    background-color: var(--dark);
+    color: var(--background);
+    &__leanMore{
+        color: var(--green);
+        &::after{
+            @include buttonArrow;
+        }
+    }
 }
 
 @media(max-width: 800px) {
     .section{
         padding: 0 0 50px 0;
+    }
+    .mainCards{              
+        &__container{
+            background-color: var(--dark);
+        }  
+        &__leanMore{
+            &::after{
+                left: 110px;
+                bottom: 30px;
+            }
+        }
     }
 }

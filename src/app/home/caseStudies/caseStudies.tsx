@@ -1,6 +1,6 @@
 import React from 'react';
 import stl from './caseStudies.module.scss';
-import Case from '../../../components/cards/case/case';
+import Case from '../../../components/cards/case';
 
 const content = [{
     description: "For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."
@@ -23,7 +23,9 @@ const caseStudies = () => {
                 <Case key={index} 
                     classNameMain={stl.mainCards__container}                    
                     classNameDescription={stl.mainCards__description}
-                    description={cartContent.description} className={stl[`main__line-${index}`]} />
+                    description={cartContent.description} 
+                    classNameButton={stl.mainCards__leanMore}
+                    classNameTextMore={stl.mainCards__text}/>
             ))}
             </section>
         </section>

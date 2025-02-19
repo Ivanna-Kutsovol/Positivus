@@ -1,6 +1,6 @@
 import React from 'react';
 import stl from './useCases.module.scss'
-import Case from '@/components/cards/case/case';
+import Case from '@/components/cards/case';
 
 const cases = [
     {
@@ -35,7 +35,8 @@ const UseCases = () => {
                         title={content.title}
                         classNameTitle={stl.mainCards__title}
                         description={content.description}
-                        className={stl[`main__line-${index}`]}
+                        classNameButton={stl.mainCards__leanMore}
+                        classNameTextMore={stl.mainCards__text}
                     />
                 ))}
             </section>

@@ -1,8 +1,10 @@
 import React from "react";
 import stl from "./featuredSuccessStory.module.scss";
 import Link from "next/link";
+import AnimatedCounter from "@/components/UI/AnimatedCounter";
 
 const FeaturedSuccessStory = () => {
+    const reduceMotion = false;
     return (
         <section className={stl.section}>
             <div className={stl.section__content}>
@@ -14,19 +16,19 @@ const FeaturedSuccessStory = () => {
             </div>
             <div className={stl.section__block}>
                 <div className={stl.section__blockContent}>
-                    <h2 className={stl.section__blockTitle}>200%</h2>
+                    <h2 className={stl.section__blockTitle}>{reduceMotion ? "200" : <AnimatedCounter from={0} to={200}/>} %</h2>
                     <p className={stl.section__blockDescription}>increase in organic traffic</p>
                 </div>
                 <div className={stl.section__blockContent}>
-                    <h2 className={stl.section__blockTitle}>150%</h2>
+                    <h2 className={stl.section__blockTitle}>{reduceMotion ? "150" : <AnimatedCounter from={0} to={150}/>}%</h2>
                     <p className={stl.section__blockDescription}>rise in online sales</p>
                 </div>
                 <div className={stl.section__blockContent}>
-                    <h2 className={stl.section__blockTitle}>75%</h2>
+                    <h2 className={stl.section__blockTitle}>{reduceMotion ? "75" : <AnimatedCounter from={0} to={75}/>}%</h2>
                     <p className={stl.section__blockDescription}>reduction in cost-per-click (CPC)</p>
                 </div>
                 <div className={stl.section__blockContent}>
-                    <h2 className={stl.section__blockTitle}>300%</h2>
+                    <h2 className={stl.section__blockTitle}>{reduceMotion ? "300" : <AnimatedCounter from={0} to={300}/>}%</h2>
                     <p className={stl.section__blockDescription}>improvement in conversion rate</p>
                 </div>
             </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import stl from "./impact.module.scss";
-import Image from "next/image";
+import AnimatedCounter from "@/components/UI/AnimatedCounter";
 
 const OurImpact = () => {
+    const reduceMotion = false;
     return (
         <section className={stl.section}>
             <section className={stl.main}>
@@ -13,23 +14,23 @@ const OurImpact = () => {
             </section>
             <section className={stl.main__containerContent}>
                 <div className={stl.main__content}>
-                    <h2>8+</h2>
+                    <h2>{reduceMotion ? "8" : <AnimatedCounter from={0} to={8}/>}+</h2>
                     <p>Years of Experience</p>
                 </div>
                 <div className={stl.main__content}>
-                    <h2>50+</h2>
+                    <h2>{reduceMotion ? "50" : <AnimatedCounter from={0} to={50}/>}+</h2>
                     <p>Experts</p>
                 </div>
                 <div className={stl.main__content}>
-                    <h2>100+</h2>
+                    <h2>{reduceMotion ? "100" : <AnimatedCounter from={0} to={100}/>}+</h2>
                     <p>Successful Campaigns</p>
                 </div>
                 <div className={stl.main__content}>
-                    <h2>20+</h2>
+                    <h2>{reduceMotion ? "20" : <AnimatedCounter from={0} to={20}/>}+</h2>
                     <p>Industry Awards</p>
                 </div>
                 <div className={stl.main__content}>
-                    <h2>500%</h2>
+                    <h2>{reduceMotion ? "500" : <AnimatedCounter from={0} to={500}/>}%</h2>
                     <p>ROI for our clients</p>
                 </div>
             </section>

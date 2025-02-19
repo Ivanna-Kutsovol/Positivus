@@ -7,7 +7,6 @@
     border-radius: var(--radius);
     display: flex;
     gap: 130px;
-
     &__content{
         display: flex;
         flex-direction: column;
@@ -29,6 +28,7 @@
         color: var(--green);
         display: flex;
         align-items: center;
+        position: relative;
         &::before{
             @include buttonArrow.buttonArrow;
             background-color: var(--green);
@@ -57,5 +57,64 @@
         height: 190px;
         text-align: center;
     }
-    
+    &__starMobile{
+        display: none;
+    }
+    &__titleMobile{
+        display: none;
+    }
+}
+
+@media(max-width: 800px) {
+    .section{
+        flex-direction: column;
+        gap: 25px;
+        position: relative;
+        padding: 40px 40px 50px 95px;
+        &__starMobile{
+            display: block;
+            position: absolute;
+            left: 40px;
+        }
+        &__titleMobile{
+            display: block;
+            color: var(--green);
+            text-transform: uppercase;
+        }
+        &__title{
+            display: none;
+        }
+        &__content{
+            gap: 25px;
+            padding: 0;
+        }
+        &__block{
+            gap: 25px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 0 0 90px 0;
+        }
+        &__blockContent{
+            width: 100%;
+            height: fit-content;
+        }
+        &__link{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            gap: 15px;
+            bottom: 50px;
+            &::before{
+                @include buttonArrow.buttonArrow;
+                bottom: 0 !important;
+                left: 0 !important;
+                position: relative !important;
+                background-color: var(--green);
+                color: var(--dark);
+            }
+            &:hover::before{
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+        }
+    }
 }

@@ -2,13 +2,17 @@ import React from "react";
 import stl from "./featuredSuccessStory.module.scss";
 import Link from "next/link";
 import AnimatedCounter from "@/components/UI/AnimatedCounter";
+import Image from "next/image";
+import Star from "../../../../public/aboutUs/ourJourneyIllustration/starMobile.webp"
 
 const FeaturedSuccessStory = () => {
     const reduceMotion = false;
     return (
         <section className={stl.section}>
+            <Image src={Star} alt="Star" className={stl.section__starMobile} width={18} height={18} priority />
             <div className={stl.section__content}>
                 <h2 className={stl.section__title}>Featured Success Story</h2>
+                <h3 className={stl.section__titleMobile}>Featured</h3>
                 <h3 className={stl.section__description}>Scaling Success for a Leading E-Commerce Brand</h3>
                 <p className={stl.section__text}>Through a comprehensive SEO and PPC strategy, we helped this e-commerce brand increase visibility, 
                 drive traffic, and boost sales.</p>

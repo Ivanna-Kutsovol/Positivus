@@ -7,7 +7,7 @@ import minus from "../../../public/accordion/minusIcon.svg";
 import { motion } from "framer-motion";
 
 interface AccordionProps {
-    number: string;
+    number?: string;
     title: string;
     description: string;
     className?: string;
@@ -29,7 +29,7 @@ export const Accordion :React.FC<AccordionProps> = ({title, description, classNa
         <section className={isOpen ? `${className} ${classNameOpen}` : className} >
             <section className={`${classNameContainerTitleAndButton} ${isOpen ? classNameOpen : ''}`}>
                 <div className={classNameContainerTitle}>
-                {number.split('\n').map((line, i) => (
+                {number && number.split('\n').map((line, i) => (
                     <div key={i} className={classNameNumber}>
                         {line}
                     </div>

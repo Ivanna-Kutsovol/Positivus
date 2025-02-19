@@ -1,0 +1,7 @@
+@use '../../styles/mixins' as *;
+
+.main{
+    padding: 0 0 100px 0;
+    @include text;
+    @include accordion;
+}

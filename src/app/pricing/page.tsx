@@ -1,8 +1,8 @@
+import Price from "./price/price";
+
 export default function Pricing(){
     return(
-        <div>
-            Pricing
-        </div>
+        <Price/>
     )
 
 }

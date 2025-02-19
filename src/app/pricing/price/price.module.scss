@@ -28,6 +28,20 @@
         font-weight: 700;
         padding: 0 0 20px 0;
     }
+    &__planActive{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__active{
+        background-color: var(--green);
+        padding: 7px 12px;
+        border-radius: 30px;
+        color: var(--dark);
+        height: fit-content;
+        &:hover{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    }
     &__price{
         padding: 0 0 65px;
         &__number{

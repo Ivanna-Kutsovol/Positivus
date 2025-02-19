@@ -18,6 +18,7 @@ const card = [
     },
     {
         plan: "Pro Plan",
+        active: "Popular",
         price: '$1000',
         in: '/month',
         buttonFirst: 'Get Started',
@@ -54,7 +55,11 @@ const Price = () => {
             <section className={stl.main__cards}>
                 {card.map((content, index) => (
                     <div key={`card-${index}`} className={`${stl[`main__container-${index}`]} ${stl.main__container}`}>
-                        <h3 className={stl.main__plan}>{content.plan}</h3>
+                        <div className={stl.main__planActive}>
+                            <h3 className={stl.main__plan}>{content.plan}</h3>
+                            {content.active && <p className={stl.main__active}>{content.active}</p>}
+                        </div>
+                        
                         <div className={stl.main__price}>
                             <span className={stl.main__price__number}>{content.price}</span>
                             <span className={stl.main__price__in}>{content.in}</span>

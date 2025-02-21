@@ -9,9 +9,10 @@ interface CaseProps {
     classNameDescription?: string;
     classNameButton?: string;
     classNameTextMore?: string;
+    textButton?: string;
 }
 
-export const Case :React.FC<CaseProps> = ({className = '', title, description, classNameMain='',classNameTitle='', classNameDescription='', classNameButton='', 
+export const Case :React.FC<CaseProps> = ({className = '', title, description, classNameMain='',classNameTitle='', classNameDescription='', classNameButton='', textButton,
     classNameTextMore=''}) => {
     return (
         <section className={classNameMain}>
@@ -30,7 +31,7 @@ export const Case :React.FC<CaseProps> = ({className = '', title, description, c
             ))}
             </section>
             <div className={classNameButton}>
-                <button className={classNameTextMore}>Lean more</button>
+                <button className={classNameTextMore}>{textButton ? textButton : <span>Lean more</span>}</button>
             </div>
         </section>
     )

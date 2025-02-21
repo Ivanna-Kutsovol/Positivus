@@ -1,0 +1,110 @@
+.section{
+    padding: 0 0 100px 0;
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px 30px;
+    }
+    &__headContent{
+        display: flex;
+        gap: 9px;
+    }
+    &__date{
+        display: flex;
+        gap: 7px;
+        align-items: flex-end;
+    }
+    &__dateBig{
+        font-size: 24px;
+        color: #D9D9D9;
+    }
+    &__dateMiddle{
+        font-size: 20px;
+    }
+    &__dateSmall{
+        font-size: 16px;
+        color: #D9D9D9;
+    }
+    &__line{
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+        margin: 0 0 70px 0;
+    }
+    &__content{
+        display: flex;
+        gap: 70px;
+        flex-direction: column;
+        padding: 0 185px;
+    }
+    &__introduction{
+        font-size: 24px;
+        line-height: 50px;
+        text-align: justify;
+    }
+    &__text{
+        margin: 30px 0 0 0;
+        text-align: justify;
+    }
+    &__quote{
+        display: block;
+        margin: 30px 0 0 0;
+        padding: 0 0 0 55px;
+        border-left: 6px solid var(--green);
+        line-height: 1.5; 
+        font-size: 30px;
+        font-weight: 100;
+    }
+    &__number{
+        font-size: 30px;
+        color: var(--green);
+    }
+    &__group{
+        display: flex;
+    }
+    &__list{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        list-style-type: disc;
+        padding: 0 0 0 15px;
+    }
+}
+.starButton{
+    position: relative;
+    left: 50%;
+    margin: 40px 0 0 0;
+}
+@media(max-width: 800px){
+    .section{
+    &__head{
+        padding: 0  0 30px 0;
+    }   
+    &__content{
+        padding: 0;
+        gap: 40px;
+    }
+    &__text{
+        margin: 20px 0 0 0;
+    }
+    &__introduction{
+        font-size: 18px;
+        line-height:normal;
+    }
+    &__quote{
+        font-size: 26px;
+        padding: 0 0 0 25px;
+        text-align: left;
+    }
+    &__line{
+        margin: 0 0 50px 0;
+    }
+}
+.star{
+    width: 50px;
+    height: auto;
+}
+}
+

@@ -37,7 +37,7 @@
         flex-direction: column;
         gap: 20px;
         padding: 40px 20px;
-        margin: 110px 0 60px 0;
+        margin: 210px 0 60px 0;
         background-color: transparent;
         &__content{
             gap: 20px;
@@ -48,7 +48,7 @@
         }
         &__title{
             position: absolute;
-            top: -80px;
+            top: -160px;
             line-height: normal;
         }
     }

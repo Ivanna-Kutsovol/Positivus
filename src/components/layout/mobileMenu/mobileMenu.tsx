@@ -4,13 +4,17 @@ import stl from "./mobileMenu.module.scss"
 import Button from "@/components/UI/button/button";
 import Link from "next/link";
 
-const MobileMenu = () => {
+interface MobileMenuProps {
+    tooggleMenu: () => void;
+}
+
+const MobileMenu:React.FC<MobileMenuProps> = ({  tooggleMenu }) => {
     return (
-        <main className={stl.main}>
+        <main className={stl.main} onClick={tooggleMenu}>
             <nav className={stl.main__nav}>
             <ul className={stl.main__list}>
                 <li className={stl.main__item}>
-                    <Link className={stl.main__link} href="#">About us</Link>
+                    <Link className={stl.main__link} href="/about-us">About us</Link>
                 </li>
                 <li className={stl.main__item}>
                     <Link className={stl.main__link} href="/services">Services</Link>

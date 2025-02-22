@@ -81,7 +81,8 @@ export default function Header() {
                     <button><Image src={BurgerIcon} className={!isBurgerMenu ? stl.burgerMenu : stl.hidden} alt="Burger Menu" width={24} height={24}/></button>
                     <button className={isBurgerMenu ? stl.cross : stl.hidden}/>
                 </div>
-                {isBurgerMenu && <MobileMenu/>}
+                {isBurgerMenu && 
+                    <MobileMenu tooggleMenu={() => setTimeout(() => setIsBurgerMenu(false), 800)} />}
                 </>
                 
              )}

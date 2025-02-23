@@ -72,6 +72,26 @@
     }
 }
 
+@media(max-width: 1024px) {
+    .header{
+        padding: 3em 50px 1em;
+    }
+    .nav{
+        &__list{
+            gap: 25px;
+        }
+    }
+    .logo{
+        & > img{
+            width: 160px;
+            height: auto;    
+        }
+    }
+    .main{
+        grid-template-columns: 0fr 2fr;
+    }
+}
+
 @media(max-width: 800px){
     .header{
         width: 100vw;

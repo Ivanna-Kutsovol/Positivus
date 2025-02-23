@@ -46,15 +46,22 @@
     &__text{
         font-size: 20px;
     }
-    @media(max-width: 1024px) {
-        justify-content: space-between;
-        padding: 50px 40px;
-        gap: 0;
+    @media (max-width: 1024px) {
         &::before, &::after{
             display: none;
         }
+        padding: 50px 40px;
+        &__description{
+            width: 240px;
+        }
+        justify-content: space-between;
+        gap: 0;
+    }
+    @media(max-width: 800px) {
+        
         &__description{
             font-size: 16px;
+            width: 290px;
         }
     }
     @media(max-width: 800px) {
@@ -167,6 +174,12 @@
         border-radius: 7px;
         width: fit-content;
     }
+    @media(max-width: 1024px) {
+        &__container{
+            width: 450px;
+            padding: 35px;
+        }
+    }
     @media(max-width: 800px) {
             &__container{
                 display: grid;
@@ -230,7 +243,7 @@
         box-shadow:  0 5px 0 #191A23;
         border-radius: var(--radius);
         border: 1px solid #191A23;
-        padding: 60px 41px;
+        padding: 60px 41px 30px;
         background-color: var(--grey);
     }
     &__contentPrev{
@@ -260,7 +273,23 @@
     max-height: min-content;
     &__description{
         border-top: 1px solid #191A23;
-        padding: 30px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+}
+@media(max-width: 1024px) {
+    &__content{
+        padding: 40px 41px 20px;
+    }
+    &__number{
+        font-size: 50px;
+    }
+    &__title{
+        font-size: 25px;
+    }
+    .open{
+        &__description{
+            padding: 20px 0 0 0;
+        }
     }
 }
  @media(max-width: 800px) {

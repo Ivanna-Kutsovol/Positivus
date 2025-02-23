@@ -63,6 +63,15 @@
     left: 35px;
 }
 
+@media(max-width: 1024px) {
+    .team{
+        gap: 50px;
+        justify-content: center;
+        &__container{
+            width: 400px;
+        }
+    }
+}
 @media(max-width: 800px) {
     .team{
         &__container{

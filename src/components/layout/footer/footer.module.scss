@@ -107,11 +107,10 @@
     background-color: var(--background);
 }
 
-@media(max-width: 800px){
+@media(max-width: 1024px){
     .footer{
         padding: 30px 40px 40px;
         width: calc(100% + 40px);
-        border-radius: 0;
         left: -20px;
         position: relative;
         overflow: hidden !important;
@@ -167,5 +166,10 @@
     .line{
         width: 80%;
     }
-    
+}
+
+@media(max-width: 800px){
+    .footer{
+        border-radius: 0;
+    }
 }

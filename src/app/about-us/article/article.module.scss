@@ -32,18 +32,24 @@
     }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1024px) {
     .article{
-        padding: 40px 20px;
-        height: auto;
-        margin: 0 0 50px 0;
-        flex-direction: column;
         &__illustration{
             display: none;
         }
         &__illustrationMobile{
             display: block;
         }
+    }
+}
+
+@media(max-width: 800px) {
+    .article{
+        padding: 40px 20px;
+        height: auto;
+        margin: 0 0 50px 0;
+        flex-direction: column;
+        
     }
     .container{
         width: fit-content;

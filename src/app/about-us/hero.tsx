@@ -1,5 +1,5 @@
 import React from "react";
-import Illustration from "../../../../public/aboutUs/hero.png";
+import Illustration from "../../../public/aboutUs/hero.png";
 import Hero from "@/components/UI/hero/hero";
 
 const HeroAbout = () => {

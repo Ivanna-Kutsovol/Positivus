@@ -21,6 +21,20 @@
     }
 }
 
+@media(max-width: 1024px) {
+    .main{
+        margin: 100px 0 70px 0;
+
+        &__ilustration{
+            height: auto;
+            width: 340px;
+        }
+        &__title{
+            line-height: normal;
+        }
+    }
+}
+
 @media(max-width: 800px) {
     .main{
         flex-direction: column;

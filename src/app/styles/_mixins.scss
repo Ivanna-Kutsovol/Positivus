@@ -179,6 +179,9 @@
             width: 450px;
             padding: 35px;
         }
+        &__section{
+            row-gap: 10px;
+        }
     }
     @media(max-width: 800px) {
             &__container{

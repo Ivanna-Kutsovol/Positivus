@@ -62,8 +62,7 @@ const Testimonials = () => {
         }
         .swiper-pagination-bullet {
             position: relative;
-            left: 40%;
-            right: 40%;
+            justify-content: center;
             width: 25px;
             height: 25px;
             background-color: transparent;
@@ -83,7 +82,12 @@ const Testimonials = () => {
             background-color: #B9FF66;
             transform: scale(1.2);
         }
-
+        .swiper-horizontal > .swiper-pagination-bullets, 
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom, .swiper-pagination-fraction {
+            left: 40%;
+            width: fit-content;
+        }
         @media (max-width: 768px) {
             .swiper-button-prev,
             .swiper-button-next{
@@ -100,9 +104,8 @@ const Testimonials = () => {
                 margin: 0 0 35px 0;
                 gap: 3px;
             }
-            .swiper-pagination-bullet {
-                left: 20%;
-                right: 20%;
+            .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+                left: 35%;
             }
         }
       `,

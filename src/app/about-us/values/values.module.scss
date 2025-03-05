@@ -23,7 +23,7 @@
     top: 35%;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1280px) {
     .main{
         &__illustration{
             position: relative;
@@ -36,20 +36,24 @@
 }
 @media(max-width: 800px) {
     .main{
+        &__illustration{
+            width: 230px;
+        }
+    }
+}
+@media(max-width: 500px) {
+    .main{
         &__container{
             display: flex;
             flex-direction: column;
             width: calc(100% + 20px);
             left: 0;
-            margin: -10px;
+            margin: 0 -10px;
             height: fit-content;
         }
         &__content{
             flex-direction: column;
             gap: 20px;
-        }
-        &__illustration{
-            width: 230px;
         }
     }
     .line{

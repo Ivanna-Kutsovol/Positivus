@@ -1,3 +1,6 @@
+.active{
+    color: #000!important;
+}
 .section{
     padding: 0 0 100px 0;
     &__head{
@@ -21,6 +24,7 @@
     }
     &__dateMiddle{
         font-size: 20px;
+        color: #D9D9D9;
     }
     &__dateSmall{
         font-size: 16px;

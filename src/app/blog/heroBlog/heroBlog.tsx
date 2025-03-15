@@ -7,9 +7,9 @@ const heroBlog = () => {
     return (
         <section className={stl.main}>
             <Image 
-            className={stl.main__ilustration} 
+            className={stl.main__illustration} 
             src={Illustration} 
-            alt="Ilustration hero" 
+            alt="illustration hero" 
             width={470} height={430} 
             priority/>
             <div className={stl.main__content}>

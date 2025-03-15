@@ -62,13 +62,19 @@
     right: 35px;
     left: 35px;
 }
-
+@media(max-width: 1280px) {
+    .team{
+        gap: 15px;
+        &__container{
+            width: 350px;
+        }
+    }
+}
 @media(max-width: 1024px) {
     .team{
         gap: 50px;
-        justify-content: center;
         &__container{
-            width: 400px;
+            width: 430px;
         }
     }
 }

@@ -121,7 +121,13 @@
         }
     }
 }
-
+@media(max-width:1024px){
+    .main{
+        &__cards{
+            flex-direction: column;
+        }
+    }
+}
 
 @media(max-width: 800px) {
     .main{
@@ -134,9 +140,6 @@
         }
         &__subtitle{
             font-size: 16px;
-        }
-        &__cards{
-            flex-direction: column;
         }
         &__container{
             padding: 35px 30px 50px 30px;

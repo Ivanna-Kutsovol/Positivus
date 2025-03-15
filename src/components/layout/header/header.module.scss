@@ -7,6 +7,9 @@
     width: 100%;
     padding: 4em 6.3em 1em 6.3em;
     background-color: var(--background);
+    max-width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .main{
     display: grid;
@@ -71,11 +74,15 @@
         height: auto; 
     }
 }
-
-@media(max-width: 1024px) {
+@media(max-width: 1300px){
     .header{
         padding: 3em 50px 1em;
     }
+    .main{
+        grid-template-columns: 0fr 2fr;
+    }
+}
+@media(max-width: 1024px) {
     .nav{
         &__list{
             gap: 25px;
@@ -86,9 +93,6 @@
             width: 160px;
             height: auto;    
         }
-    }
-    .main{
-        grid-template-columns: 0fr 2fr;
     }
 }
 

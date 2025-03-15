@@ -31,7 +31,15 @@
         }
     }
 }
-
+@media(max-width: 1024px){
+    .main{
+        gap: 50px;
+        &__illustration{
+            height: auto;
+            width: 340px;
+        }
+    }
+}
 @media(max-width: 800px) {
     .main{
         flex-direction: column;
@@ -41,10 +49,6 @@
         background-color: transparent;
         &__content{
             gap: 20px;
-        }
-        &__ilustration{
-            height: auto;
-            width: 340px;
         }
         &__title{
             position: absolute;

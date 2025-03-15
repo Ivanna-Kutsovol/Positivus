@@ -30,7 +30,7 @@
     &__button{
         display: flex;
         align-items: center;
-        left: 0;
+        position: relative;
         &::before{
             @include buttonArrow;
         }

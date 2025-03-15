@@ -32,6 +32,17 @@
         }
     }
 }
+@media(max-width: 1024px) {
+    .mainCards{
+        gap: 30px;
+        &__container{
+            width: 260px;
+        }
+        &::before{
+            right: 35%;
+        }
+    }
+}
 @media(max-width: 800px) {
     .mainCards{
         &__line{

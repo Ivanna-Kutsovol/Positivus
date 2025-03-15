@@ -13,6 +13,7 @@
     padding: 60px 100px 80px;
     background-color: var(--grey);
     border-radius: var(--radius);
+    position: relative;
     &__illustration{
         position: absolute;
         right: 100px;

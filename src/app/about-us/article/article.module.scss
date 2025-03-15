@@ -31,7 +31,15 @@
         font-weight: bold;
     }
 }
-
+@media(max-width: 1280px) {
+    .article{
+        &__illustration{
+            width: 400px;
+            height: auto;
+            top: 0px;
+        }
+    }
+}
 @media(max-width: 1024px) {
     .article{
         &__illustration{

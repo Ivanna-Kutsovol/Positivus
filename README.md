@@ -8,7 +8,7 @@ Built with **Next.js** and **React**, it demonstrates a clean, modern, and respo
 The project also includes reusable UI components such as product cards and buttons for easy integration into other projects.
 
 Live demo: 
-[Positivus]([https://petprogect-ivanna-projects.vercel.app/])
+[Positivus](https://petprogect-ivanna-projects.vercel.app/)
 
 ---
 

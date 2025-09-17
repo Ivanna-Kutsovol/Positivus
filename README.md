@@ -12,7 +12,7 @@ Live demo:
 
 ---
 
-##mFeatures
+## Features
 
 - **Multi-page website with sections/pages for**:
   - Services
